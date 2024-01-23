@@ -13,7 +13,10 @@ export default function Accueil() {
     <Textmove/>
     <div className="principalContainer">
         <div className="characterInfo">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat dicta cum minima pariatur, expedita libero ullam enim illo obcaecati quaerat tenetur, quam, nobis in! Nihil vitae atque repudiandae et eveniet architecto ratione autem, veniam eum natus numquam rem laudantium? Dignissimos asperiores sint ea id quidem consectetur libero ex possimus?</p>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat dicta cum minima pariatur, expedita libero ullam enim illo obcaecati quaerat tenetur, quam, nobis in! Nihil vitae atque repudiandae et eveniet architecto ratione autem, veniam eum natus numquam rem laudantium? Dignissimos asperiores sint ea id quidem consectetur libero ex possimus?</p>
+                <button></button>
+            </div>
             <ul>
                 <li>dzq</li>
                 <li>dzq</li>
@@ -21,6 +24,7 @@ export default function Accueil() {
                 <li>dzq</li>
             </ul>
         </div>
+        <h2 className='titleSection'>COMPETENCE</h2>
     </div>
     </>
     

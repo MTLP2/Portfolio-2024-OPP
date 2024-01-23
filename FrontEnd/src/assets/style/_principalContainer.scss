@@ -33,14 +33,39 @@
 
     .characterInfo{
         display: flex;
-        gap: 200px;
+        margin-top: 30px;
+        justify-content: space-evenly;
 
 
         p{
-            width: 50%;
+            font-size: 28px;
+            width: 80%;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            font-size: 25px;
+            list-style: none;
+            gap: 20px;
+            width: 100%;
+            
+            li{
+                border-bottom: 1px solid black;
+                height: 40px;
+                width: 80%;
+
+            }
         }
     }
 
+    .titleSection{
+        text-align: center;
+        width: 100%;
+        background-color: blue;
+        padding-top: 150px;
+        font-size: 140px;
+
+    }
 }
 
 
