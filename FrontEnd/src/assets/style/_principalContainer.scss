@@ -1,0 +1,46 @@
+.Container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.principalContainer {
+    background-color: gray;
+    width: 85%;
+    height: 100%;
+
+    
+
+    .characterRole{
+        background-color: red;
+        flex-direction: column;
+        gap: 30px;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            background-color: blue;
+            width: 30%;
+            height: 50%;
+        }
+
+        h2{
+            font-size: 45px;
+        }
+    }
+
+    .characterInfo{
+        display: flex;
+        gap: 200px;
+
+
+        p{
+            width: 50%;
+        }
+    }
+
+}
+
+

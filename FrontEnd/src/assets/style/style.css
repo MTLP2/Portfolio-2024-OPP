@@ -1,1 +1,66 @@
-/*# sourceMappingURL=style.css.map */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(52, 49, 45);
+}
+
+nav {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+nav .Link {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.principalContainer {
+  background-color: gray;
+  width: 85%;
+  height: 100%;
+}
+.principalContainer .characterRole {
+  background-color: red;
+  flex-direction: column;
+  gap: 30px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.principalContainer .characterRole img {
+  background-color: blue;
+  width: 30%;
+  height: 50%;
+}
+.principalContainer .characterRole h2 {
+  font-size: 45px;
+}
+.principalContainer .characterInfo {
+  display: flex;
+  gap: 200px;
+}
+.principalContainer .characterInfo p {
+  width: 50%;
+}/*# sourceMappingURL=style.css.map */
