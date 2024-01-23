@@ -12,9 +12,12 @@ body {
 
 nav {
   display: flex;
-  padding: 20px;
+  padding: 50px;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(52, 49, 45);
 }
 
 nav ul {
@@ -48,11 +51,12 @@ nav .Link {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 .principalContainer .characterRole img {
   background-color: blue;
   width: 30%;
-  height: 50%;
+  height: 60%;
 }
 .principalContainer .characterRole h2 {
   font-size: 45px;

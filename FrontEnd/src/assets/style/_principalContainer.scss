@@ -6,6 +6,7 @@
 
 .principalContainer {
     background-color: gray;
+
     width: 85%;
     height: 100%;
 
@@ -19,11 +20,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 100px;
+
 
         img{
             background-color: blue;
             width: 30%;
-            height: 50%;
+            height: 60%;
         }
 
         h2{
