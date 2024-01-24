@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 export default function Nav() {
   return (
-    <nav>
+    <nav className='nav'>
         <NavLink className={"Link"} to="/"><h2>MATHEO LOPES</h2></NavLink>
         <ul>
             <li><NavLink className={"Link"} to="/About">ABOUT</NavLink></li>

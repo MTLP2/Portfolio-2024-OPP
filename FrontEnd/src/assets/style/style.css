@@ -6,8 +6,12 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: Headlines;
+  src: url("/fonts/HeadlinesUniB-MediumTrial.otf");
+}
 body {
-  background-color: rgb(52, 49, 45);
+  background-color: rgb(31, 30, 29);
 }
 
 nav {
@@ -17,7 +21,9 @@ nav {
   align-items: center;
   position: fixed;
   width: 100%;
-  background-color: rgb(52, 49, 45);
+  background-color: rgb(31, 30, 29);
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 999;
 }
 
 nav ul {
@@ -39,19 +45,18 @@ nav .Link {
 }
 
 .principalContainer {
-  background-color: gray;
   width: 85%;
   height: 100%;
 }
 .principalContainer .characterRole {
-  background-color: red;
   flex-direction: column;
   gap: 30px;
   height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 300px;
+  margin-bottom: 120px;
 }
 .principalContainer .characterRole img {
   background-color: blue;
@@ -59,16 +64,20 @@ nav .Link {
   height: 60%;
 }
 .principalContainer .characterRole h2 {
-  font-size: 45px;
+  font-size: 55px;
+  font-family: "Headlines";
+  color: #CAC9CB;
 }
 .principalContainer .characterInfo {
   display: flex;
   margin-top: 30px;
   justify-content: space-evenly;
+  color: #CAC9CB;
 }
 .principalContainer .characterInfo p {
   font-size: 28px;
   width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .principalContainer .characterInfo ul {
   display: flex;
@@ -79,14 +88,52 @@ nav .Link {
   width: 100%;
 }
 .principalContainer .characterInfo ul li {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #CAC9CB;
   height: 40px;
   width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .principalContainer .titleSection {
   text-align: center;
   width: 100%;
-  background-color: blue;
+  color: #CAC9CB;
   padding-top: 150px;
-  font-size: 140px;
+  font-size: 150px;
+  z-index: 99;
+  position: relative;
+  font-family: "Headlines";
+}
+
+.skillBox {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: #4D4B48;
+  border-radius: 10px;
+  margin-top: -50px;
+  width: 100%;
+  padding: 100px;
+  height: 300px;
+}
+.skillBox .skillBoxUnique {
+  width: 300px;
+}
+
+.textMove {
+  display: flex;
+  align-items: center;
+  background-color: #363533;
+  color: #b2b1b3;
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  text-wrap: nowrap;
+}
+.textMove h2 {
+  position: relative;
+  font-size: 252px;
+  font-family: "Headlines";
+}
+.textMove h2::before {
+  content: attr(data-text);
 }/*# sourceMappingURL=style.css.map */

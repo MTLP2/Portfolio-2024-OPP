@@ -1,0 +1,20 @@
+.textMove{
+    display: flex;
+    align-items: center;
+    background-color: #363533;
+    color: #b2b1b3;
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+    text-wrap: nowrap;
+
+    h2{
+        position: relative;
+        font-size: 252px;
+        font-family: $titlefont;
+    }
+    h2::before {
+        content:attr(data-text);
+      }
+
+}

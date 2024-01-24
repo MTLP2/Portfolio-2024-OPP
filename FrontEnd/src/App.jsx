@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import {Routes, Route} from "react-router-dom";
 
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+
+
+
 import './assets/style/style.css'
 
 import Nav from './Component/Nav';
@@ -11,7 +16,12 @@ import Textmove from './Component/Textmove';
 
 
 function App() {
+  useGSAP(() => {
+    // gsap code here...
+    gsap.fromTo(".nav", {opacity:0, y: -30},{opacity:1, y: 0, delay:1}, "+2")
 
+  
+  })
 
   return (
     <>

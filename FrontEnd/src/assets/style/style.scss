@@ -14,14 +14,19 @@
 // ***********         FONT  CSS         **********
 // ************************************************
 
+@font-face {
+    font-family: Headlines;
+    src: url('/fonts/HeadlinesUniB-MediumTrial.otf');
+}
 
+$titlefont : 'Headlines';
 
 
 // ************************************************
 // ***********         COLOR CSS         **********
 // ************************************************
 
-$black: rgba(52, 49, 45, 1);
+$black: rgb(31, 30, 29);
 
 
 
@@ -57,3 +62,4 @@ body{
 
 @import "nav";
 @import "principalContainer";
+@import "textMove"

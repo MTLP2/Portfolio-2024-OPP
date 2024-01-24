@@ -5,7 +5,7 @@
 }
 
 .principalContainer {
-    background-color: gray;
+
 
     width: 85%;
     height: 100%;
@@ -13,14 +13,14 @@
     
 
     .characterRole{
-        background-color: red;
         flex-direction: column;
         gap: 30px;
         height: 700px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 300px;
+        margin-bottom: 120px;
 
 
         img{
@@ -30,7 +30,9 @@
         }
 
         h2{
-            font-size: 45px;
+            font-size: 55px;
+            font-family: $titlefont;
+            color: #CAC9CB;
         }
     }
 
@@ -38,11 +40,13 @@
         display: flex;
         margin-top: 30px;
         justify-content: space-evenly;
+        color: #CAC9CB;
 
 
         p{
             font-size: 28px;
             width: 80%;
+            font-family: Arial, Helvetica, sans-serif;
         }
         ul{
             display: flex;
@@ -53,9 +57,11 @@
             width: 100%;
             
             li{
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid #CAC9CB;
                 height: 40px;
                 width: 80%;
+                font-family: Arial, Helvetica, sans-serif;
+
 
             }
         }
@@ -64,11 +70,29 @@
     .titleSection{
         text-align: center;
         width: 100%;
-        background-color: blue;
+        color: #CAC9CB;
         padding-top: 150px;
-        font-size: 140px;
+        font-size: 150px;
+        z-index: 99;
+        position: relative;
+        font-family: $titlefont;
 
     }
 }
 
 
+.skillBox{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #4D4B48;
+    border-radius: 10px;
+    margin-top: -50px;
+    width: 100%;
+    padding: 100px;
+    height: 300px;
+
+    .skillBoxUnique{
+        width: 300px;
+    }
+}
