@@ -131,7 +131,7 @@ const ThreeBox = () => {
             if (containerTop <= windowHeight  && containerTop >= -containerHeight) {
                 // Calculez la nouvelle position de la caméra en fonction du défilement
                 const scrollFraction = (windowHeight - containerTop) / (windowHeight + containerHeight);
-                scrollY = scrollFraction * 30 // Calculez en fonction de scrollFraction
+                scrollY = scrollFraction * 70 // Calculez en fonction de scrollFraction
                 console.log(scrollY);
         
             }
