@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 import Textmove from '../Component/Textmove'
 import Skillbox from '../Component/Skillbox';
+import ThreeBox from '../Component/ThreeBox';
 
 
 
@@ -51,7 +52,7 @@ export default function Accueil() {
             <Skillbox/>
             <h2 className='titleSection'>PROJECT</h2>
             <div className="sectionProject">
-                
+                <ThreeBox/>
             </div>
         </div>
 
