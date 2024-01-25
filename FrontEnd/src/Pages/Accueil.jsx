@@ -6,11 +6,14 @@ import { useGSAP } from "@gsap/react";
 
 import Textmove from '../Component/Textmove'
 import Skillbox from '../Component/Skillbox';
-import ThreeBox from '../Component/ThreeBox';
+import ProjetComponent from '../Component/ProjetComponent';
+import CommentComponent from '../Component/CommentComponent';
 
 
 
-export default function Accueil() {
+
+
+export default function Accueil({data}) {
 
     const timeline = gsap.timeline()
     useGSAP(() => {
@@ -51,9 +54,12 @@ export default function Accueil() {
             <h2 className='titleSection'>COMPETENCE</h2>
             <Skillbox/>
             <h2 className='titleSection'>PROJECT</h2>
-            <div className="sectionProject">
-                <ThreeBox/>
-            </div>
+            <ProjetComponent data={data}/>
+            <button>See my other work</button>
+            <h2 className='titleSection'>Testimonies</h2>
+            <CommentComponent/>
+
+
         </div>
 
     </>

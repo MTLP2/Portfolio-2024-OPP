@@ -1,0 +1,35 @@
+[
+	{
+		"id": "1",
+		"title": "Kasa",
+		"text": "lorem ipsum suli olp lm",
+		"imageUrl": "/img/Kasa.png",
+		"tags": [
+			"Front",
+			"Back"
+		]
+		
+	},
+	{
+		"id": "1",
+		"title": "Kasa",
+		"text": "lorem ipsum suli olp lm",
+		"imageUrl": "/img/Kasa.png",
+		"tags": [
+			"Front",
+			"Back"
+		]
+		
+	},
+	{
+		"id": "1",
+		"title": "Kasa",
+		"text": "lorem ipsum suli olp lm",
+		"imageUrl": "/img/Kasa.png",
+		"tags": [
+			"Front",
+			"Back"
+		]
+		
+	}
+]

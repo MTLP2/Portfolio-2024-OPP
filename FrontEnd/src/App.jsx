@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import {Routes, Route} from "react-router-dom";
+import Data from './assets/Data.json'
+
 
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
@@ -16,6 +18,7 @@ import Textmove from './Component/Textmove';
 
 
 function App() {
+  const [data , setdata] = useState(Data)
   useGSAP(() => {
     // gsap code here...
     gsap.fromTo(".nav", {opacity:0, y: -30},{opacity:1, y: 0, delay:1}, "+2")
@@ -28,7 +31,7 @@ function App() {
     <Nav/>
     <div className='Container'>
       <Routes>
-        <Route path='*' element={<Accueil />} ></Route>
+        <Route path='*' element={<Accueil data={data}/>} ></Route>
         <Route path='/About' element={<About />} ></Route>
       </Routes>
     </div>
