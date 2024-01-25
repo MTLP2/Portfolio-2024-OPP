@@ -251,7 +251,7 @@ nav .Link {
   align-items: center;
   justify-content: center;
 }
-.contactContainer button {
+.contactContainer .contactme {
   background: rgb(42, 42, 42);
   border: 5px solid rgba(48, 48, 48, 0.134);
   border-radius: 180px;
@@ -261,7 +261,7 @@ nav .Link {
   font-family: "Headlines";
   transition: 1s all;
 }
-.contactContainer :hover {
+.contactContainer .contactme:hover {
   background: white;
   border: none;
   border: 5px solid rgba(48, 48, 48, 0.134);
@@ -270,4 +270,32 @@ nav .Link {
 .contactContainer .socialContainer {
   display: flex;
   gap: 200px;
+}
+.contactContainer .fa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(42, 42, 42);
+  border: 5px solid rgba(48, 48, 48, 0.134);
+  border-radius: 180px;
+  font-size: 252px;
+  width: 100px;
+  height: 100px;
+  transition: 1s all;
+  font-size: 62px;
+}
+.contactContainer .fa:hover {
+  border: 5px solid rgba(48, 48, 48, 0.134);
+  color: rgb(72, 138, 177);
+  box-shadow: rgba(94, 142, 253, 0.1) 0px 8px 24px, rgba(58, 110, 170, 0.1) 0px 16px 56px, rgba(88, 138, 238, 0.353) 0px 24px 80px;
+}
+.contactContainer .fa:hover:nth-child(2) {
+  border: 5px solid rgba(48, 48, 48, 0.134);
+  color: rgb(209, 209, 209);
+  box-shadow: rgba(215, 215, 215, 0.1) 0px 8px 24px, rgba(209, 209, 209, 0.1) 0px 16px 56px, rgba(238, 238, 238, 0.353) 0px 24px 80px;
+}
+.contactContainer .fa:hover:nth-child(3) {
+  border: 5px solid rgba(48, 48, 48, 0.134);
+  color: rgb(255, 115, 229);
+  box-shadow: rgba(245, 109, 255, 0.1) 0px 8px 24px, rgba(255, 83, 40, 0.1) 0px 16px 56px, rgba(13, 94, 0, 0.353) 0px 24px 80px;
 }/*# sourceMappingURL=style.css.map */
