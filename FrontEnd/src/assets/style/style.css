@@ -108,7 +108,9 @@ nav .Link {
   display: flex;
   justify-content: center;
   gap: 50px;
-  background-color: #4D4B48;
+  color: #CAC9CB;
+  background: rgb(29, 29, 29);
+  background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
   border-radius: 10px;
   margin-top: -50px;
   width: 100%;
@@ -122,7 +124,8 @@ nav .Link {
 .textMove {
   display: flex;
   align-items: center;
-  background-color: #363533;
+  background: rgb(29, 29, 29);
+  background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(59, 59, 59) 89%, rgb(73, 73, 73) 100%);
   color: #b2b1b3;
   width: 100%;
   overflow: hidden;
@@ -151,8 +154,10 @@ nav .Link {
   border-radius: 30px;
   height: 503px;
   overflow: hidden;
-  color: white;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: #CAC9CB;
+  background: rgb(29, 29, 29);
+  background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   opacity: 0;
 }
 .projectContainer .projectItem img {
@@ -198,12 +203,29 @@ nav .Link {
 
 .swiper-slide {
   text-align: center;
-  font-size: 128px;
-  background: #fff;
+  background: rgb(29, 29, 29);
+  background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
+  color: #CAC9CB;
+  padding: 40px;
   /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  height: 350px !important;
+  flex-direction: column;
+  justify-content: space-around !important;
+  align-items: flex-start;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.swiper-slide img {
+  height: 50px !important;
+  width: 50px !important;
+}
+.swiper-slide p {
+  font-size: 22px;
+}
+.swiper-slide h3 {
+  font-size: 24px;
 }
 
 .swiper-slide img {

@@ -85,7 +85,9 @@
     display: flex;
     justify-content: center;
     gap: 50px;
-    background-color: #4D4B48;
+    color: #CAC9CB;
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
     border-radius: 10px;
     margin-top: -50px;
     width: 100%;

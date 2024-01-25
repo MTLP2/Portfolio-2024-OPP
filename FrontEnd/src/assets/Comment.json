@@ -1,0 +1,30 @@
+[
+	{
+		"id": "1",
+		"author": "— Antoine Dupont",
+		"text": "\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eligendi Odit ex aut nihil ducimus perferendis dolore error odio dolorum quaerat aperiam\"",
+		"imageUrl": "/img/Kasa.png"
+		
+	},
+	{
+		"id": "2",
+		"author": "— Antoine Dupont",
+		"text": "\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eligendi Odit ex aut nihil ducimus perferendis dolore error odio dolorum quaerat aperiam\"",
+		"imageUrl": "/img/Kasa.png"
+		
+	},
+	{
+		"id": "3",
+		"author": "— Antoine Dupont",
+		"text": "\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eligendi Odit ex aut nihil ducimus perferendis dolore error odio dolorum quaerat aperiam\"",
+		"imageUrl": "/img/Kasa.png"
+		
+	},
+	{
+		"id": "4",
+		"author": "— Antoine Dupont",
+		"text": "\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eligendi Odit ex aut nihil ducimus perferendis dolore error odio dolorum quaerat aperiam\"",
+		"imageUrl": "/img/Kasa.png"
+		
+	}
+]

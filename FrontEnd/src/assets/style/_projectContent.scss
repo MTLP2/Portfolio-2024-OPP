@@ -11,8 +11,11 @@
         border-radius: 30px;
         height: 503px;
         overflow: hidden;
-        color: white;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        color: #CAC9CB;
+        background: rgb(29,29,29);
+        background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
         opacity: 0;
 
         img{
@@ -59,25 +62,3 @@
     
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 128px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }

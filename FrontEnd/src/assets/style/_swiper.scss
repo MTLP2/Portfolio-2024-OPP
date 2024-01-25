@@ -1,0 +1,43 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
+    color: #CAC9CB;
+    padding: 40px;
+
+    /* Center slide text vertically */
+    display: flex !important;
+    height: 350px !important;
+    flex-direction: column;
+    justify-content: space-around !important;
+    align-items: flex-start;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    img{
+        height: 50px !important;
+        width: 50px !important;
+
+    }
+
+    p{
+        font-size: 22px;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

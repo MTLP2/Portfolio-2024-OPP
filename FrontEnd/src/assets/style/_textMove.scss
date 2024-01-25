@@ -1,7 +1,8 @@
 .textMove{
     display: flex;
     align-items: center;
-    background-color: #363533;
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgba(59,59,59,1) 89%, rgba(73,73,73,1) 100%);
     color: #b2b1b3;
     width: 100%;
     overflow: hidden;
