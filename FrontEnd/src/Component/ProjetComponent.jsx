@@ -24,7 +24,7 @@ export default function MyComponent({data}) {
       gsap.to(project, {
         scrollTrigger: {
           trigger: project,
-          start: `${-150 - index * 150}px center`,
+          start: `top center`,
           end: "bottom center",
           markers: true,
           toggleActions: "play none none reverse"
