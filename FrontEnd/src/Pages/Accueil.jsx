@@ -58,6 +58,16 @@ export default function Accueil({data}) {
             <button>See my other work</button>
             <h2 className='titleSection'>Testimonies</h2>
             <CommentComponent/>
+            <div className="contactContainer">
+                <button>Contact ME ►</button>
+                <div className='socialContainer'>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            
+
 
 
         </div>

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import Data from '../assets/Comment.json'
 
 // Import Swiper styles
@@ -13,8 +14,9 @@ import { Pagination } from 'swiper/modules';
 
 export default function App() {
     const [data, setdata] = useState(Data)
-  return (
-    <>
+
+    return (
+        <>
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -25,8 +27,8 @@ export default function App() {
         className="mySwiper"
       >
         {data.map((element)=>(
-            <SwiperSlide>
-                    <p>{element.text}</p>
+            <SwiperSlide >
+                    <p >{element.text}</p>
                     <h3>{element.author}</h3>
                     <img src={element.imageUrl} alt="" />
             </SwiperSlide>

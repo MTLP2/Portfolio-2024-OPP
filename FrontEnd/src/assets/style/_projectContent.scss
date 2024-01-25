@@ -1,7 +1,6 @@
 .projectContainer{
     display: flex;
-    flex-direction: column;
-    padding: 100px;
+    flex-direction: column;    
     gap: 100px;
 
     .projectItem{
@@ -22,9 +21,9 @@
             position: absolute;
             z-index: -2;
             border-radius: 20px;
-            top: -40px;
             object-fit: cover;
             width: 100%;
+            top: -40px;
             transform: scale(1.2)
             
         }

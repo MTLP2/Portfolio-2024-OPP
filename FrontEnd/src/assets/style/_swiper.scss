@@ -12,7 +12,7 @@
 
     /* Center slide text vertically */
     display: flex !important;
-    height: 350px !important;
+    height: 450px !important;
     flex-direction: column;
     justify-content: space-around !important;
     align-items: flex-start;
@@ -27,13 +27,18 @@
     }
 
     p{
-        font-size: 22px;
+        font-size: 26px;
     }
 
     h3{
         font-size: 24px;
     }
   }
+
+  .swiper-pagination-bullet{
+    background-color: white !important;
+  }
+  
   
   .swiper-slide img {
     display: block;
