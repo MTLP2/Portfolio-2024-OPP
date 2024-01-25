@@ -28,19 +28,16 @@
             
         }
         h3{
-            font-size: 32px;
-            padding: 20px;
-        }
-        p{
-            font-size: 22px;
-            padding: 20px;
-            width: 800px;
+            font-family: $titlefont;
+            font-size: 62px;
+            padding-left: 50px;
         }
 
         .projectInfo .containerTag{
-            padding: 20px;
+            padding: 50px;
             gap: 20px;
             display: flex;
+
 
             h4{
                 display: flex;
@@ -55,6 +52,7 @@
 
             }
         }
+
 
     }
 

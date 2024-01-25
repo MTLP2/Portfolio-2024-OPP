@@ -84,7 +84,7 @@
 .skillBox{
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     color: #CAC9CB;
     background: rgb(29,29,29);
     background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
@@ -95,7 +95,31 @@
     height: 300px;
 
     .skillBoxUnique{
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        flex-direction: column;
         width: 300px;
+        gap: 10px;
+    }
+
+    .skillBoxUnique h3{
+        font-size: 26px;
+    }
+
+    .skillBoxUnique:nth-child(1){
+        color: rgb(181, 181, 0);
+    }
+    .skillBoxUnique:nth-child(2){
+        color: rgb(0, 109, 181);
+    }
+    .skillBoxUnique:nth-child(3){
+        color: rgb(1, 126, 28);
+    }
+    .skillBoxUnique:nth-child(4){
+        color: rgb(234, 82, 171);
+    }
+    .skillBoxUnique:nth-child(5){
+        color: rgb(252, 54, 74);
     }
 }
 

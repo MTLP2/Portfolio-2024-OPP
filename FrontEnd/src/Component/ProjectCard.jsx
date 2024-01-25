@@ -7,7 +7,6 @@ export default function ProjectCard({title, text, imageUrl,tags, addToRefs}) {
             <img src={imageUrl} alt="Kasa project" />
             <div className="projectInfo">
                 <h3>{title}</h3>
-                <p>{text}</p>
                 <Tag tags={tags}/>
 
             </div>

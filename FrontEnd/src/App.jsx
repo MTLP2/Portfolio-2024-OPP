@@ -14,6 +14,9 @@ import Nav from './Component/Nav';
 import Accueil from './Pages/Accueil';
 import About from './Pages/About';
 import Textmove from './Component/Textmove';
+import Footer from './Component/Footer';
+import Contact from './Pages/Contact';
+import Project from './Pages/Project';
 
 
 
@@ -33,9 +36,11 @@ function App() {
       <Routes>
         <Route path='*' element={<Accueil data={data}/>} ></Route>
         <Route path='/About' element={<About />} ></Route>
+        <Route path='/Project' element={<Project />} ></Route>
+        <Route path='/Contact' element={<Contact />} ></Route>
       </Routes>
     </div>
-
+    <Footer/>
     
     </>
   )

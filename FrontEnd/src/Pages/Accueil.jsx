@@ -8,6 +8,7 @@ import Textmove from '../Component/Textmove'
 import Skillbox from '../Component/Skillbox';
 import ProjetComponent from '../Component/ProjetComponent';
 import CommentComponent from '../Component/CommentComponent';
+import ButtonLink from '../Component/ButtonLink';
 
 
 
@@ -41,7 +42,7 @@ export default function Accueil({data}) {
             <div className="characterInfo">
                 <div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat dicta cum minima pariatur, expedita libero ullam enim illo obcaecati quaerat tenetur, quam, nobis in! Nihil <br /><br /> vitae atque repudiandae et eveniet architecto ratione autem, veniam eum natus numquam rem laudantium? Dignissimos asperiores sint ea id quidem consectetur libero ex possimus?</p>
-                    <button>View my work</button>
+                    <ButtonLink name={"VIEW MY WORK"}/>
                 </div>
                 <ul>
                     <h2>Availible for</h2>
@@ -55,18 +56,10 @@ export default function Accueil({data}) {
             <Skillbox/>
             <h2 className='titleSection'>PROJECT</h2>
             <ProjetComponent data={data}/>
-            <button>See my other work</button>
+            <ButtonLink name={"SEE MY OTHER WORK"}/>
             <h2 className='titleSection'>Testimonies</h2>
             <CommentComponent/>
-            <div className="contactContainer">
-                <button className='contactme'>Contact ME ►</button>
-                <div className='socialContainer'>
-                    <button className='fa'><i class="fa-brands fa-linkedin-in"></i></button>
-                    <button className='fa'><i class="fa-brands fa-x-twitter"></i></button>
-                    <button className='fa'><i class="fa-brands fa-instagram"></i></button>
-
-                </div>
-            </div>
+            
             
 
 
