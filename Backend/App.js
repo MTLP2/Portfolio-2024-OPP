@@ -1,8 +1,17 @@
 const express = require('express');
+const auth = require('./middlewares/auth');
+const mongoose = require('mongoose')
+const stuffcontroler = require('./controllers/stuff')
 
 const app = express();
 
 
+mongoose.connect('mongodb+srv://mathlp:123@cluster0.f5cinxt.mongodb.net/?retryWrites=true&w=majority')
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
+
+
+app.use(express.json())
 
 app.use(express.json())
 
@@ -14,14 +23,11 @@ app.use((req, res, next) => {
   });
 
 
-app.get('/project', (req,res,next)=>{
-    res.end('oui')
-})
+app.post('/project', auth, stuffcontroler.createThings )
 
 app.post('/contact', (req,res,next)=>{
     res.end('oui')
 })
-
 
 
 
