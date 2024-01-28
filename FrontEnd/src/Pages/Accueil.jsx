@@ -9,6 +9,8 @@ import Skillbox from '../Component/Skillbox';
 import ProjetComponent from '../Component/ProjetComponent';
 import CommentComponent from '../Component/CommentComponent';
 import ButtonLink from '../Component/ButtonLink';
+import ImgBox from '../Component/ImgBox';
+import Footer from '../Component/Footer';
 
 
 
@@ -32,10 +34,7 @@ export default function Accueil({data}) {
   return (
     <>
     <div className='principalContainer'>
-        <div className='characterRole'>
-            <img className='imgCharacter' src="" alt="" />
-            <h2 className='titleCharacter'>Matheo Lopes</h2>
-        </div>
+        <ImgBox text={"MATHEO LOPES"}/>
     </div>
         <Textmove/>
         <div className="principalContainer secondContainer">
@@ -65,6 +64,7 @@ export default function Accueil({data}) {
 
 
         </div>
+        <Footer/>
 
     </>
     

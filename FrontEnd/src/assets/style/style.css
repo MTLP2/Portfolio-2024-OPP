@@ -323,6 +323,82 @@ nav .Link {
   box-shadow: rgba(245, 109, 255, 0.1) 0px 8px 24px, rgba(255, 83, 40, 0.1) 0px 16px 56px, rgba(13, 94, 0, 0.353) 0px 24px 80px;
 }
 
+.contactSection {
+  display: flex;
+  margin-top: 150px;
+  width: 100%;
+  height: 1250px;
+}
+.contactSection .contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  width: 50%;
+  gap: 20px;
+  color: white;
+  background: rgb(29, 29, 29);
+  background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.contactSection .contactInfo .titleSection {
+  padding-top: 0px;
+  width: 600px;
+  line-height: 150px;
+  text-align: left;
+}
+.contactSection .contactInfo p {
+  width: 550px;
+}
+.contactSection .formInfo {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+.contactSection .formInfo form {
+  display: flex;
+  padding: 50px;
+  width: 60%;
+  gap: 20px;
+  color: red;
+  flex-direction: column;
+}
+.contactSection .formInfo form label {
+  text-align: left;
+  color: white;
+}
+.contactSection .formInfo form .Field {
+  font-size: 20px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  border: none;
+  color: #CAC9CB;
+  background: rgb(29, 29, 29);
+  background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.contactSection .formInfo form .Field::-moz-placeholder {
+  color: #CAC9CB;
+}
+.contactSection .formInfo form .Field::placeholder {
+  color: #CAC9CB;
+}
+.contactSection .formInfo form .Field-message {
+  font-size: 20px;
+  padding: 10px;
+  height: 250px;
+}
+.contactSection .formInfo form .formButton {
+  width: 150px;
+  font-size: 32px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.contactSection .formInfo form .defaultButton {
+  width: 200px;
+}
+
 .defaultButton {
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
@@ -340,4 +416,56 @@ nav .Link {
 .defaultButton:hover {
   transform: scale(1.1);
   box-shadow: rgba(116, 118, 122, 0.1) 0px 8px 24px, rgba(58, 110, 170, 0.1) 0px 16px 56px, rgba(134, 135, 138, 0.353) 0px 24px 80px;
+}
+
+.AboutContainer .characterRole {
+  flex-direction: column;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px;
+  margin-bottom: -100px;
+}
+.AboutContainer .characterRole h2 {
+  font-size: 152px;
+}
+.AboutContainer p {
+  color: #CAC9CB;
+  font-size: 1.5rem;
+  line-height: 129%;
+}
+.AboutContainer .AboutInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AboutContainer .AboutInfo p {
+  width: 60%;
+}
+.AboutContainer .journeyContainer {
+  font-family: "Headlines";
+  color: #CAC9CB;
+}
+.AboutContainer .journeyContainer h3 {
+  font-size: 62px;
+  margin-bottom: 20px;
+  border-bottom: 10px solid rgb(58, 58, 58);
+}
+.AboutContainer .journeyContainer li {
+  margin-left: 150px;
+  font-size: 52px;
+}
+.AboutContainer .defaultButton {
+  margin: 100px;
+  margin-left: 45%;
+}
+
+.projetContainer {
+  margin-top: 200px;
+  color: white;
+}
+.projetContainer .titleSection {
+  font-size: 200px;
+  margin-bottom: -30px;
 }/*# sourceMappingURL=style.css.map */

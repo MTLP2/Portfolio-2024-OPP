@@ -36,11 +36,10 @@ function App() {
       <Routes>
         <Route path='*' element={<Accueil data={data}/>} ></Route>
         <Route path='/About' element={<About />} ></Route>
-        <Route path='/Project' element={<Project />} ></Route>
+        <Route path='/Project' element={<Project data={data} />} ></Route>
         <Route path='/Contact' element={<Contact />} ></Route>
       </Routes>
     </div>
-    <Footer/>
     
     </>
   )

@@ -27,6 +27,7 @@ $titlefont : 'Headlines';
 // ************************************************
 
 $black: rgb(31, 30, 29);
+$gray : #CAC9CB;
 
 
 
@@ -66,5 +67,7 @@ body{
 @import "projectContent";
 @import "swiper";
 @import "Contact";
-@import "DefaultButton"
+@import "DefaultButton";
+@import "AboutContainer";
+@import "projetContainer";
 
