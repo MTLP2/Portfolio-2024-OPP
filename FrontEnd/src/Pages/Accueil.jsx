@@ -41,7 +41,7 @@ export default function Accueil({data}) {
             <div className="characterInfo">
                 <div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis placeat dicta cum minima pariatur, expedita libero ullam enim illo obcaecati quaerat tenetur, quam, nobis in! Nihil <br /><br /> vitae atque repudiandae et eveniet architecto ratione autem, veniam eum natus numquam rem laudantium? Dignissimos asperiores sint ea id quidem consectetur libero ex possimus?</p>
-                    <ButtonLink name={"VIEW MY WORK"}/>
+                    <ButtonLink link={'/Project'} name={"VIEW MY WORK"}/>
                 </div>
                 <ul>
                     <h2>Availible for</h2>
@@ -55,7 +55,7 @@ export default function Accueil({data}) {
             <Skillbox/>
             <h2 className='titleSection'>PROJECT</h2>
             <ProjetComponent data={data}/>
-            <ButtonLink name={"SEE MY OTHER WORK"}/>
+            <ButtonLink link={'/Project'} name={"SEE MY OTHER WORK"}/>
             <h2 className='titleSection'>Testimonies</h2>
             <CommentComponent/>
             

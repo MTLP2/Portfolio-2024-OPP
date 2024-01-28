@@ -278,9 +278,9 @@ nav .Link {
   background: rgb(42, 42, 42);
   border: 5px solid rgba(48, 48, 48, 0.134);
   border-radius: 180px;
-  font-size: 252px;
-  height: 60%;
-  width: 80%;
+  font-size: 242px;
+  height: 100%;
+  width: 110%;
   font-family: "Headlines";
   transition: 1s all;
 }
@@ -297,7 +297,10 @@ nav .Link {
 .contactContainer .fa {
   display: flex;
   justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
   align-items: center;
+  color: black;
   background-color: rgb(42, 42, 42);
   border: 5px solid rgba(48, 48, 48, 0.134);
   border-radius: 180px;
