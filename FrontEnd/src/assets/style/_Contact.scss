@@ -115,13 +115,20 @@
             padding: 50px;
             width: 60%;
             gap: 20px;
-            color: red;
+
             flex-direction: column;
 
 
             label{
                 text-align: left;
                 color: white;
+            }
+
+            div{
+                color: red;
+            }
+            p{
+                color: greenyellow;
             }
 
             .Field{

@@ -363,12 +363,17 @@ nav .Link {
   padding: 50px;
   width: 60%;
   gap: 20px;
-  color: red;
   flex-direction: column;
 }
 .contactSection .formInfo form label {
   text-align: left;
   color: white;
+}
+.contactSection .formInfo form div {
+  color: red;
+}
+.contactSection .formInfo form p {
+  color: greenyellow;
 }
 .contactSection .formInfo form .Field {
   font-size: 20px;

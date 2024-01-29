@@ -1,6 +1,7 @@
 const express = require('express');
 const auth = require('./middlewares/auth');
 const mongoose = require('mongoose');
+const nodemailer = require('nodemailer')
 const Project = require('./models/Thing');
 const Comment = require('./models/Comment');
 
@@ -38,6 +39,37 @@ app.get('/comment', (req, res, next) => {
 app.post('/contact', (req,res,next)=>{
     res.end('oui')
 })
+
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // Utilisez votre service de messagerie
+  auth: {
+      user: 'math.starci@gmail.com',
+      pass: 'wmnp mwxe ofli sqkr'
+  }
+});
+
+app.post('/send', (req, res) => {
+  const { name, email, message, projectType, projectUrgency } = req.body;
+
+  const mailOptions = {
+      from: email,
+      to: 'math.starci@gmail.com', // L'email destinataire (peut être le même que l'expéditeur)
+      subject: `Nouveau message de ${name}`,
+      text: `Message: ${message}\nType de Projet: ${projectType}\nUrgence: ${projectUrgency}`
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          console.error('Erreur d\'envoi de mail:', error);
+          res.status(500).send('Erreur lors de l\'envoi du mail');
+      } else {
+          console.log('Email envoyé:', info.response);
+          res.status(200).send('Email envoyé avec succès');
+      }
+  });
+});
+
 
 
 
