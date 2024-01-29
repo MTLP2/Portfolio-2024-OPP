@@ -1,7 +1,8 @@
 const express = require('express');
 const auth = require('./middlewares/auth');
-const mongoose = require('mongoose')
-const stuffcontroler = require('./controllers/stuff')
+const mongoose = require('mongoose');
+const Project = require('./models/Thing');
+const Comment = require('./models/Comment');
 
 const app = express();
 
@@ -23,7 +24,16 @@ app.use((req, res, next) => {
   });
 
 
-app.post('/project', auth, stuffcontroler.createThings )
+app.get('/project', (req, res, next) => {
+  Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
+})
+
+
+app.get('/comment', (req, res, next) => {
+  Comment.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
+})
+
+
 
 app.post('/contact', (req,res,next)=>{
     res.end('oui')

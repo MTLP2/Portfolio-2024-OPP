@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef,useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import axios from 'axios';
 
-import Data from '../assets/Comment.json'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,10 +13,27 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 export default function App() {
-    const [data, setdata] = useState(Data)
+    const [data, setdata] = useState()
+    const [loading, setLoading] = useState(true); // État de chargement
+
+
+    useEffect(() => {
+      axios.get('http://localhost:4000/comment')
+          .then(response => {
+              setdata(response.data);
+              setLoading(false); // Mise à jour de l'état de chargement
+          })
+          .catch(error => {
+              console.log(error);
+              setLoading(false); // Mise à jour de l'état de chargement
+          });
+  }, []);
 
     return (
         <>
+        {loading ? (
+                <p>Chargement en cours...</p> // Affichage pendant le chargement
+            ) : (
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -35,6 +52,7 @@ export default function App() {
           ))}
 
       </Swiper>
+            )}
     </>
   );
 }
