@@ -1,14 +1,17 @@
+require('dotenv').config();
 const express = require('express');
-const auth = require('./middlewares/auth');
 const mongoose = require('mongoose');
+const helmet = require('helmet');
 const nodemailer = require('nodemailer')
+
 const Project = require('./models/Thing');
 const Comment = require('./models/Comment');
 
 const app = express();
 
+app.use(helmet());
 
-mongoose.connect('mongodb+srv://mathlp:123@cluster0.f5cinxt.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`)
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
@@ -35,17 +38,11 @@ app.get('/comment', (req, res, next) => {
 })
 
 
-
-app.post('/contact', (req,res,next)=>{
-    res.end('oui')
-})
-
-
 const transporter = nodemailer.createTransport({
   service: 'gmail', // Utilisez votre service de messagerie
   auth: {
-      user: 'math.starci@gmail.com',
-      pass: 'wmnp mwxe ofli sqkr'
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS
   }
 });
 
@@ -54,7 +51,7 @@ app.post('/send', (req, res) => {
 
   const mailOptions = {
       from: email,
-      to: 'math.starci@gmail.com', // L'email destinataire (peut être le même que l'expéditeur)
+      to: process.env.MAIL_USER, // L'email destinataire (peut être le même que l'expéditeur)
       subject: `Nouveau message de ${name}`,
       text: `Message: ${message}\nType de Projet: ${projectType}\nUrgence: ${projectUrgency}`
   };
