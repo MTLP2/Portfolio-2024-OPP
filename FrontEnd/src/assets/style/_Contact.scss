@@ -16,9 +16,13 @@
         border-radius: 180px;
         font-size: 242px;
         height: 100%;
-        width: 110%;
+        padding: 10px;
         font-family: $titlefont;
         transition: 1s all;
+
+        @include for-1024{
+            font-size: 150px;
+        }
 
     }.contactme:hover{
         background: white ;
@@ -89,6 +93,10 @@
         background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
+        @include for-1024{
+            width: 60%;
+    
+        }
 
         .titleSection{
             padding-top: 0px;
@@ -118,6 +126,10 @@
 
             flex-direction: column;
 
+            @include for-1024{
+                width: 100%;
+        
+            }
 
             label{
                 text-align: left;

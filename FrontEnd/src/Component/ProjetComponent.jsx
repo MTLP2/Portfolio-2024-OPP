@@ -26,7 +26,6 @@ export default function MyComponent({data}) {
           trigger: project,
           start: `top center`,
           end: "bottom center",
-          markers: true,
           toggleActions: "play none none reverse"
         },
         opacity: 1,

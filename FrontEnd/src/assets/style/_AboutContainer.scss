@@ -26,7 +26,7 @@
         flex-direction: column;
         align-items: center;
         p{
-            width: 60%;
+            width: 90%;
         }
     }
 
@@ -49,5 +49,10 @@
     .defaultButton{
         margin: 100px;
         margin-left: 45%;
+
+        @include for-1024{
+            margin-left: 35%;
+    
+        }
     }
 }

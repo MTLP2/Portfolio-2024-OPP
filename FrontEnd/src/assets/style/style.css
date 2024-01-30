@@ -115,7 +115,11 @@ nav .Link {
   margin-top: -50px;
   width: 100%;
   padding: 100px;
-  height: 300px;
+}
+@media (max-width: 1024px) {
+  .skillBox {
+    flex-direction: column;
+  }
 }
 .skillBox .skillBoxUnique {
   display: flex;
@@ -125,7 +129,21 @@ nav .Link {
   gap: 10px;
 }
 .skillBox .skillBoxUnique h3 {
-  font-size: 26px;
+  font-size: 36px;
+}
+@media (max-width: 1024px) {
+  .skillBox .skillBoxUnique h3 {
+    font-size: 20px;
+    width: 500px;
+  }
+}
+.skillBox p {
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .skillBox p {
+    width: 700px;
+  }
 }
 .skillBox .skillBoxUnique:nth-child(1) {
   color: rgb(181, 181, 0);
@@ -188,16 +206,16 @@ nav .Link {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: 75%;
   top: -40px;
-  transform: scale(1.2);
 }
 .projectContainer .projectItem h3 {
   font-family: "Headlines";
   font-size: 62px;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 .projectContainer .projectItem .projectInfo .containerTag {
-  padding: 50px;
+  padding: 30px;
   gap: 20px;
   display: flex;
 }
@@ -242,6 +260,11 @@ nav .Link {
 .swiper-slide p {
   font-size: 26px;
 }
+@media (max-width: 1024px) {
+  .swiper-slide p {
+    font-size: 20px;
+  }
+}
 .swiper-slide h3 {
   font-size: 24px;
 }
@@ -280,9 +303,14 @@ nav .Link {
   border-radius: 180px;
   font-size: 242px;
   height: 100%;
-  width: 110%;
+  padding: 10px;
   font-family: "Headlines";
   transition: 1s all;
+}
+@media (max-width: 1024px) {
+  .contactContainer .contactme {
+    font-size: 150px;
+  }
 }
 .contactContainer .contactme:hover {
   background: white;
@@ -344,6 +372,11 @@ nav .Link {
   background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+@media (max-width: 1024px) {
+  .contactSection .contactInfo {
+    width: 60%;
+  }
+}
 .contactSection .contactInfo .titleSection {
   padding-top: 0px;
   width: 600px;
@@ -364,6 +397,11 @@ nav .Link {
   width: 60%;
   gap: 20px;
   flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .contactSection .formInfo form {
+    width: 100%;
+  }
 }
 .contactSection .formInfo form label {
   text-align: left;
@@ -449,7 +487,7 @@ nav .Link {
   align-items: center;
 }
 .AboutContainer .AboutInfo p {
-  width: 60%;
+  width: 90%;
 }
 .AboutContainer .journeyContainer {
   font-family: "Headlines";
@@ -467,6 +505,11 @@ nav .Link {
 .AboutContainer .defaultButton {
   margin: 100px;
   margin-left: 45%;
+}
+@media (max-width: 1024px) {
+  .AboutContainer .defaultButton {
+    margin-left: 35%;
+  }
 }
 
 .projetContainer {

@@ -23,18 +23,19 @@
             border-radius: 20px;
             object-fit: cover;
             width: 100%;
+            height: 75%;
             top: -40px;
-            transform: scale(1.2)
+
             
         }
         h3{
             font-family: $titlefont;
             font-size: 62px;
-            padding-left: 50px;
+            padding-left: 30px;
         }
 
         .projectInfo .containerTag{
-            padding: 50px;
+            padding: 30px;
             gap: 20px;
             display: flex;
 

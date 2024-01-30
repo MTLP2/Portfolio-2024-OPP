@@ -39,6 +39,26 @@ export default function App() {
         spaceBetween={30}
         pagination={{
           clickable: true,
+          
+        }}
+        breakpoints={{
+          375: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1440: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
         }}
         modules={[Pagination]}
         className="mySwiper"

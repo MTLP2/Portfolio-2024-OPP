@@ -13,6 +13,7 @@
     padding: 40px;
     transition: 1s all;
     
+   
 
     /* Center slide text vertically */
     display: flex !important;
@@ -32,12 +33,18 @@
 
     p{
         font-size: 26px;
+
+        @include for-1024{
+          font-size: 20px;
+      }
     }
 
     h3{
         font-size: 24px;
     }
   }
+
+  
 
   .swiper-pagination-bullet{
     background-color: white !important;

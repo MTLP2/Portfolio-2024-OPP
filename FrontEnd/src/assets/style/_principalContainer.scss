@@ -92,7 +92,13 @@
     margin-top: -50px;
     width: 100%;
     padding: 100px;
-    height: 300px;
+
+    @include for-1024{
+        flex-direction: column;
+
+
+    }
+
 
     .skillBoxUnique{
         display: flex;
@@ -100,10 +106,28 @@
         flex-direction: column;
         width: 300px;
         gap: 10px;
+
+
     }
 
     .skillBoxUnique h3{
-        font-size: 26px;
+        font-size: 36px;
+
+        @include for-1024{
+            font-size: 20px;
+            width: 500px;
+
+        }
+        
+    }
+
+    p{
+        font-size: 20px;
+
+        @include for-1024{
+            width: 700px;
+
+        }
     }
 
     .skillBoxUnique:nth-child(1){
