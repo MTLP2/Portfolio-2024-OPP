@@ -74,10 +74,22 @@ nav .Link {
   justify-content: space-evenly;
   color: #CAC9CB;
 }
+@media (max-width: 425px) {
+  .principalContainer .characterInfo {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .principalContainer .characterInfo p {
   font-size: 28px;
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 425px) {
+  .principalContainer .characterInfo p {
+    width: 100%;
+    font-size: 20px;
+  }
 }
 .principalContainer .characterInfo ul {
   display: flex;
@@ -93,6 +105,11 @@ nav .Link {
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 425px) {
+  .principalContainer .characterInfo ul li {
+    width: 100%;
+  }
+}
 .principalContainer .titleSection {
   text-align: center;
   width: 100%;
@@ -102,6 +119,11 @@ nav .Link {
   z-index: 99;
   position: relative;
   font-family: "Headlines";
+}
+@media (max-width: 425px) {
+  .principalContainer .titleSection {
+    font-size: 70px;
+  }
 }
 
 .skillBox {
@@ -121,12 +143,22 @@ nav .Link {
     flex-direction: column;
   }
 }
+@media (max-width: 425px) {
+  .skillBox {
+    padding: 50px;
+  }
+}
 .skillBox .skillBoxUnique {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   flex-direction: column;
   width: 300px;
   gap: 10px;
+}
+@media (max-width: 425px) {
+  .skillBox {
+    width: 100%;
+  }
 }
 .skillBox .skillBoxUnique h3 {
   font-size: 36px;
@@ -137,12 +169,33 @@ nav .Link {
     width: 500px;
   }
 }
+@media (max-width: 1024px) {
+  .skillBox .skillBoxUnique h3 {
+    font-size: 20px;
+    width: 0px;
+  }
+}
+@media (max-width: 425px) {
+  .skillBox .skillBoxUnique h3 {
+    width: 0px;
+  }
+}
 .skillBox p {
   font-size: 20px;
 }
 @media (max-width: 1024px) {
   .skillBox p {
     width: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .skillBox p {
+    width: 500px;
+  }
+}
+@media (max-width: 425px) {
+  .skillBox p {
+    width: 220px;
   }
 }
 .skillBox .skillBoxUnique:nth-child(1) {
@@ -203,8 +256,6 @@ nav .Link {
   position: absolute;
   z-index: -2;
   border-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
   width: 100%;
   height: 75%;
   top: -40px;
@@ -253,6 +304,11 @@ nav .Link {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+@media (max-width: 768px) {
+  .swiper-slide {
+    height: 390px !important;
+  }
+}
 .swiper-slide img {
   height: 50px !important;
   width: 50px !important;
@@ -293,7 +349,6 @@ nav .Link {
   margin-bottom: 200px;
   display: flex;
   width: 100%;
-  height: 800px;
   align-items: center;
   justify-content: center;
 }
@@ -301,7 +356,7 @@ nav .Link {
   background: rgb(42, 42, 42);
   border: 5px solid rgba(48, 48, 48, 0.134);
   border-radius: 180px;
-  font-size: 242px;
+  font-size: 222px;
   height: 100%;
   padding: 10px;
   font-family: "Headlines";
@@ -310,6 +365,16 @@ nav .Link {
 @media (max-width: 1024px) {
   .contactContainer .contactme {
     font-size: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .contactContainer .contactme {
+    font-size: 119px;
+  }
+}
+@media (max-width: 425px) {
+  .contactContainer .contactme {
+    font-size: 50px;
   }
 }
 .contactContainer .contactme:hover {
@@ -321,6 +386,11 @@ nav .Link {
 .contactContainer .socialContainer {
   display: flex;
   gap: 200px;
+}
+@media (max-width: 425px) {
+  .contactContainer .socialContainer {
+    gap: 20px;
+  }
 }
 .contactContainer .fa {
   display: flex;
@@ -360,6 +430,11 @@ nav .Link {
   width: 100%;
   height: 1250px;
 }
+@media (max-width: 425px) {
+  .contactSection {
+    flex-direction: column;
+  }
+}
 .contactSection .contactInfo {
   display: flex;
   flex-direction: column;
@@ -377,24 +452,55 @@ nav .Link {
     width: 60%;
   }
 }
+@media (max-width: 768px) {
+  .contactSection .contactInfo {
+    width: 50%;
+  }
+}
+@media (max-width: 425px) {
+  .contactSection .contactInfo {
+    width: 100%;
+  }
+}
 .contactSection .contactInfo .titleSection {
   padding-top: 0px;
   width: 600px;
   line-height: 150px;
   text-align: left;
 }
+@media (max-width: 425px) {
+  .contactSection .contactInfo .titleSection {
+    width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .contactSection .contactInfo .titleSection {
+    font-size: 70px;
+    text-align: center;
+  }
+}
 .contactSection .contactInfo p {
   width: 550px;
+}
+@media (max-width: 768px) {
+  .contactSection .contactInfo p {
+    width: 350px;
+  }
 }
 .contactSection .formInfo {
   display: flex;
   width: 50%;
   height: 100%;
 }
+@media (max-width: 425px) {
+  .contactSection .formInfo {
+    width: 100%;
+  }
+}
 .contactSection .formInfo form {
   display: flex;
   padding: 50px;
-  width: 60%;
+  width: 100%;
   gap: 20px;
   flex-direction: column;
 }
@@ -476,6 +582,11 @@ nav .Link {
 .AboutContainer .characterRole h2 {
   font-size: 152px;
 }
+@media (max-width: 425px) {
+  .AboutContainer .characterRole h2 {
+    font-size: 100px;
+  }
+}
 .AboutContainer p {
   color: #CAC9CB;
   font-size: 1.5rem;
@@ -502,6 +613,11 @@ nav .Link {
   margin-left: 150px;
   font-size: 52px;
 }
+@media (max-width: 425px) {
+  .AboutContainer .journeyContainer li {
+    margin-left: 34px;
+  }
+}
 .AboutContainer .defaultButton {
   margin: 100px;
   margin-left: 45%;
@@ -519,4 +635,9 @@ nav .Link {
 .projetContainer .titleSection {
   font-size: 200px;
   margin-bottom: -30px;
+}
+@media (max-width: 425px) {
+  .projetContainer .titleSection {
+    font-size: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */

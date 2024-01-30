@@ -12,6 +12,11 @@
 
         h2{
             font-size: 152px;
+
+            @include for-phone{
+                font-size: 100px;
+        
+            }
         }
     }
 
@@ -43,6 +48,12 @@
         li{
             margin-left: 150px;
             font-size: 52px;
+
+
+            @include for-phone{
+                margin-left: 34px;
+        
+            }
         }
     }
 

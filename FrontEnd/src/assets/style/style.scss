@@ -39,7 +39,7 @@ $gray : #CAC9CB;
 
 
 @mixin for-phone{
-    @media (max-width:555px) {
+    @media (max-width:425px) {
         @content
         
     }
@@ -47,7 +47,7 @@ $gray : #CAC9CB;
 
 
 @mixin for-tablet{
-    @media (max-width:455px) {
+    @media (max-width:768px) {
         @content
         
     }

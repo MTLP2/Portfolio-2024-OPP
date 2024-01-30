@@ -6,7 +6,6 @@
     margin-bottom: 200px;
     display: flex;
     width: 100%;
-    height: 800px;
     align-items: center;
     justify-content: center;
 
@@ -14,7 +13,7 @@
         background: rgb(42, 42, 42);
         border: 5px solid rgba(48, 48, 48, 0.134);
         border-radius: 180px;
-        font-size: 242px;
+        font-size: 222px;
         height: 100%;
         padding: 10px;
         font-family: $titlefont;
@@ -22,6 +21,17 @@
 
         @include for-1024{
             font-size: 150px;
+        }
+
+        @include for-tablet{
+            font-size: 119px;
+              
+          }
+
+          @include for-phone{
+            font-size: 50px;
+
+
         }
 
     }.contactme:hover{
@@ -36,7 +46,14 @@
     .socialContainer{
         display: flex;
         gap: 200px;
+
+        @include for-phone{
+            gap: 20px;
+    
+        }
     }
+
+    
 
     .fa{
         display: flex;
@@ -79,6 +96,11 @@
     width: 100%;
     height: 1250px;
 
+    @include for-phone{
+        flex-direction: column;
+
+    }
+
 
     .contactInfo{
         display: flex;
@@ -88,28 +110,55 @@
         width: 50%;
         gap: 20px;
         color: white;
-
         background: rgb(29,29,29);
         background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
+        
+        
         @include for-1024{
             width: 60%;
     
         }
 
+        @include for-tablet{
+            width: 50%;
+              
+          }
+
+        @include for-phone{
+            width: 100%;
+    
+        }
+        
+
         .titleSection{
             padding-top: 0px;
             width: 600px;
             line-height: 150px;
-        text-align: left;
+            text-align: left;
+
+            @include for-phone{
+                width: 300px;
+        
+            }
+
+        @include for-tablet{
+            font-size: 70px;
+            text-align: center;
+              
+          }
+        
 
         }
 
         p{
-
-
             width: 550px;
+
+            @include for-tablet{
+                width: 350px;
+                  
+              }
+            
         }
 
     }
@@ -118,10 +167,15 @@
         width: 50%;
         height: 100%;
 
+        @include for-phone{
+            width: 100%;
+    
+        }
+
         form{
             display: flex;
             padding: 50px;
-            width: 60%;
+            width: 100%;
             gap: 20px;
 
             flex-direction: column;

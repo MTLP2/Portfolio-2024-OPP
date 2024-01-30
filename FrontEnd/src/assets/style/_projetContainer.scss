@@ -2,6 +2,11 @@
     .titleSection{
         font-size: 200px;
         margin-bottom: -30px;
+
+        @include for-phone{
+            font-size: 100px;
+    
+        }
     }
     margin-top: 200px;
     color: white;

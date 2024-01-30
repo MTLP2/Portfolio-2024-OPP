@@ -42,11 +42,21 @@
         justify-content: space-evenly;
         color: $gray;
 
-
+        @include for-phone{
+            flex-direction: column;
+            gap: 20px;
+    
+        }
         p{
             font-size: 28px;
             width: 80%;
             font-family: Arial, Helvetica, sans-serif;
+
+            @include for-phone{
+                width: 100%;
+                font-size: 20px;
+        
+            }
         }
         ul{
             display: flex;
@@ -62,6 +72,11 @@
                 width: 80%;
                 font-family: Arial, Helvetica, sans-serif;
 
+                @include for-phone{
+                    width: 100%;
+            
+                }
+
 
             }
         }
@@ -76,6 +91,11 @@
         z-index: 99;
         position: relative;
         font-family: $titlefont;
+
+        @include for-phone{
+            font-size: 70px;
+
+        }
 
     }
 }
@@ -98,6 +118,10 @@
 
 
     }
+    @include for-phone{
+        padding: 50px;
+
+    }
 
 
     .skillBoxUnique{
@@ -110,6 +134,11 @@
 
     }
 
+    @include for-phone{
+        width: 100%;
+
+    }
+
     .skillBoxUnique h3{
         font-size: 36px;
 
@@ -118,7 +147,19 @@
             width: 500px;
 
         }
-        
+
+        @include for-1024{
+            font-size: 20px;
+            width: 0px;
+
+        }
+
+        @include for-phone{
+            width: 0px;
+    
+        }
+
+       
     }
 
     p{
@@ -128,6 +169,17 @@
             width: 700px;
 
         }
+
+        @include for-tablet{
+            width: 500px;
+              
+          }
+
+          @include for-phone{
+            width: 220px;
+
+        }
+        
     }
 
     .skillBoxUnique:nth-child(1){
