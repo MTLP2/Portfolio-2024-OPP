@@ -15,7 +15,7 @@ app.use(compression());
 
 app.use(helmet());
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`)
+mongoose.connect(`mongodb+srv://mathlp:123@cluster0.f5cinxt.mongodb.net/?retryWrites=true&w=majority`)
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
@@ -34,11 +34,11 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res)=>{
   res.json("hello")
-  Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
 
 app.get('/project', (req, res, next) => {
+  Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
 
