@@ -34,11 +34,11 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res)=>{
   res.json("hello")
+  Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
 
 app.get('/project', (req, res, next) => {
-  Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
 
