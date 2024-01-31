@@ -15,7 +15,7 @@ app.use(compression());
 
 app.use(helmet());
 
-mongoose.connect(`mongodb+srv://mathlp:123@cluster0.f5cinxt.mongodb.net/?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`)
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
