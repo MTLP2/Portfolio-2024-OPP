@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRef } from "react";
+import {Helmet} from "react-helmet";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -33,6 +34,10 @@ export default function Accueil({data}) {
 
   return (
     <>
+    <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
     <div className='principalContainer'>
         <ImgBox text={"MATHEO LOPES"}/>
     </div>
@@ -44,7 +49,7 @@ export default function Accueil({data}) {
                     <ButtonLink link={'/Project'} name={"VIEW MY WORK"}/>
                 </div>
                 <ul>
-                    <h2>Availible for</h2>
+                    <li><h2>Availible for</h2></li>
                     <li>dzq</li>
                     <li>dzq</li>
                     <li>dzq</li>

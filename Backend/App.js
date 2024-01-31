@@ -3,11 +3,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const nodemailer = require('nodemailer')
+const compression = require('compression');
+
 
 const Project = require('./models/Thing');
 const Comment = require('./models/Comment');
 
 const app = express();
+
+app.use(compression());
 
 app.use(helmet());
 

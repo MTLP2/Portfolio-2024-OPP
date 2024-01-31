@@ -91,6 +91,7 @@
         z-index: 99;
         position: relative;
         font-family: $titlefont;
+        font-display: swap;
 
         @include for-phone{
             font-size: 70px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRef } from "react";
+import {Helmet} from "react-helmet";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -28,6 +29,10 @@ export default function About() {
       })
   return (
     <div className='principalContainer AboutContainer'>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <ImgBox text={"ABOUT ME"}/>
       <div className='animationbottom'>
 

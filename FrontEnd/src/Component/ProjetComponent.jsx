@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { gsap } from "gsap";
+import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react"; // Assurez-vous que c'est le chemin correct pour votre hook personnalisé
 import ProjectCard from './ProjectCard';

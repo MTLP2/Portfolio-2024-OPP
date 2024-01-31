@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import axios from 'axios';
+import {Helmet} from "react-helmet";
 
 const ContactForm = () => {
     const [isSubmitted, setIsSubmitted] = useState(false); // État pour gérer la confirmation
@@ -51,6 +52,10 @@ const ContactForm = () => {
 
     return (
       <div className='principalContainer contactSection'>
+        <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
         <div className="contactInfo">
           <h2 className='titleSection'>Work with Me</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dicta consequuntur libero iure, veniam tenetur neque a, cum veritatis magnam minima molestiae at nobis est expedita officiis quis non error commodi quasi nulla odio laborum odit praesentium! Magni obcaecati voluptas commodi iusto a, ducimus ipsa veritatis, explicabo quae omnis nesciunt dignissimos quas porro architecto eius illo fuga! Ea ex nam expedita, fugit vel dolor deserunt ut harum! Laborum illum reiciendis earum eum facilis incidunt ad, quam harum! Maiores ipsa voluptas odio commodi asperiores dolorum unde sit deleniti, laudantium voluptatem accusamus alias. Nesciunt nihil natus amet voluptatem minus corrupti necessitatibus pariatur.</p>
