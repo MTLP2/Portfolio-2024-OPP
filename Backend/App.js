@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const nodemailer = require('nodemailer')
 const compression = require('compression');
-
+const cors = require('cors')
 
 const Project = require('./models/Thing');
 const Comment = require('./models/Comment');
@@ -21,8 +21,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${
 
 
 app.use(express.json())
-
-app.use(express.json())
+app.use(cors());
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -37,12 +36,12 @@ app.get("/", (req, res)=>{
 })
 
 
-app.get('api/project', (req, res, next) => {
+app.get('/api/project', (req, res, next) => {
   Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
 
-app.get('api/comment', (req, res, next) => {
+app.get('/api/comment', (req, res, next) => {
   Comment.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
@@ -55,7 +54,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.post('api/send', (req, res) => {
+app.post('/api/send', (req, res) => {
   const { name, email, message, projectType, projectUrgency } = req.body;
 
   const mailOptions = {
