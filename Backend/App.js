@@ -37,12 +37,12 @@ app.get("/", (req, res)=>{
 })
 
 
-app.get('/project', (req, res, next) => {
+app.get('api/project', (req, res, next) => {
   Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
 
-app.get('/comment', (req, res, next) => {
+app.get('api/comment', (req, res, next) => {
   Comment.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
 })
 
@@ -55,7 +55,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.post('/send', (req, res) => {
+app.post('api/send', (req, res) => {
   const { name, email, message, projectType, projectUrgency } = req.body;
 
   const mailOptions = {

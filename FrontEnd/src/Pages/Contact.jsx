@@ -37,7 +37,7 @@ const ContactForm = () => {
     const onSubmit = (values, { setSubmitting }) => {
         
         // Envoi des données du formulaire via Axios
-        axios.post('http://localhost:4000/send', values)
+        axios.post('http://193.203.169.220/api/send', values)
         .then(response => {
             console.log('Message envoyé', response); // Traitement en cas de succès
             setSubmitting(false); // Mise à jour de l'état de soumission

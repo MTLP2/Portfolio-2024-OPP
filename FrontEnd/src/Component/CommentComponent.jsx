@@ -18,7 +18,7 @@ export default function App() {
 
 
     useEffect(() => {
-      axios.get('http://localhost:4000/comment')
+      axios.get('http://193.203.169.220/api/comment')
           .then(response => {
               setdata(response.data);
               setLoading(false); // Mise à jour de l'état de chargement
