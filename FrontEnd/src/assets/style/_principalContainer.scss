@@ -52,8 +52,14 @@
             width: 80%;
             font-family: Arial, Helvetica, sans-serif;
 
+
             @include for-phone{
                 width: 100%;
+                font-size: 20px;
+        
+            }
+
+            @include for-tablet{
                 font-size: 20px;
         
             }
@@ -65,11 +71,17 @@
             list-style: none;
             gap: 20px;
             width: 100%;
+
             
+            @include for-tablet{
+                font-size: 15px;
+        
+            }
+
             li{
                 border-bottom: 1px solid $gray;
                 height: 40px;
-                width: 80%;
+                width: 100%;
                 font-family: Arial, Helvetica, sans-serif;
 
                 @include for-phone{

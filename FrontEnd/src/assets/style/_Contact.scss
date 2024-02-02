@@ -13,7 +13,7 @@
         border-radius: 180px;
         font-size: 222px;
         height: 100%;
-        padding: 10px;
+        padding: 30px;
         font-family: $titlefont;
         transition: 1s all;
 
@@ -106,6 +106,10 @@
         align-items: center;
         padding: 50px;
         width: 50%;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
         gap: 20px;
         color: white;
         background: radial-gradient(circle, rgba(29,29,29,1) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);

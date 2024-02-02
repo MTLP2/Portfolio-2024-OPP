@@ -25,6 +25,9 @@ import Project from './Pages/Project';
 
 
 function App() {
+
+    
+    
   const [data, setData] = useState([]);
   const dataAccueil = data.slice(0, 3);
 
@@ -32,7 +35,7 @@ function App() {
   const [loading, setLoading] = useState(true); // État de chargement
 
   useEffect(() => {
-      axios.get('http://193.203.169.220/api/project')
+      axios.get('https://matheolopes.com/api/project')
           .then(response => {
               setData(response.data);
               setLoading(false); // Mise à jour de l'état de chargement

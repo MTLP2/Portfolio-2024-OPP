@@ -25,6 +25,11 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   z-index: 999;
 }
+@media (max-width: 740px) {
+  nav {
+    padding: 20px;
+  }
+}
 
 nav ul {
   display: flex;
@@ -74,7 +79,7 @@ nav .Link {
   justify-content: space-evenly;
   color: #CAC9CB;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .principalContainer .characterInfo {
     flex-direction: column;
     gap: 20px;
@@ -85,9 +90,14 @@ nav .Link {
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .principalContainer .characterInfo p {
     width: 100%;
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .principalContainer .characterInfo p {
     font-size: 20px;
   }
 }
@@ -99,13 +109,18 @@ nav .Link {
   gap: 20px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .principalContainer .characterInfo ul {
+    font-size: 15px;
+  }
+}
 .principalContainer .characterInfo ul li {
   border-bottom: 1px solid #CAC9CB;
   height: 40px;
-  width: 80%;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .principalContainer .characterInfo ul li {
     width: 100%;
   }
@@ -121,7 +136,7 @@ nav .Link {
   font-family: "Headlines";
   font-display: swap;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .principalContainer .titleSection {
     font-size: 70px;
   }
@@ -144,7 +159,7 @@ nav .Link {
     flex-direction: column;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .skillBox {
     padding: 50px;
   }
@@ -156,7 +171,7 @@ nav .Link {
   width: 300px;
   gap: 10px;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .skillBox {
     width: 100%;
   }
@@ -176,7 +191,7 @@ nav .Link {
     width: 0px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .skillBox .skillBoxUnique h3 {
     width: 0px;
   }
@@ -194,7 +209,7 @@ nav .Link {
     width: 500px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .skillBox p {
     width: 220px;
   }
@@ -269,7 +284,8 @@ nav .Link {
   padding-left: 30px;
 }
 .projectContainer .projectItem .projectInfo .containerTag {
-  padding: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
   gap: 20px;
   display: flex;
 }
@@ -279,9 +295,9 @@ nav .Link {
   align-items: center;
   border-radius: 20px;
   font-size: 20px;
-  background-color: white;
+  background-color: rgb(98, 97, 97);
   color: black;
-  width: 100px;
+  padding: 20px;
   height: 20px;
 }
 
@@ -359,7 +375,7 @@ nav .Link {
   border-radius: 180px;
   font-size: 222px;
   height: 100%;
-  padding: 10px;
+  padding: 30px;
   font-family: "Headlines";
   transition: 1s all;
 }
@@ -373,7 +389,7 @@ nav .Link {
     font-size: 119px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .contactContainer .contactme {
     font-size: 50px;
   }
@@ -388,7 +404,7 @@ nav .Link {
   display: flex;
   gap: 200px;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .contactContainer .socialContainer {
     gap: 20px;
   }
@@ -431,7 +447,7 @@ nav .Link {
   width: 100%;
   height: 1250px;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .contactSection {
     flex-direction: column;
   }
@@ -442,6 +458,10 @@ nav .Link {
   align-items: center;
   padding: 50px;
   width: 50%;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
   gap: 20px;
   color: white;
   background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
@@ -457,7 +477,7 @@ nav .Link {
     width: 50%;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .contactSection .contactInfo {
     width: 100%;
   }
@@ -468,7 +488,7 @@ nav .Link {
   line-height: 150px;
   text-align: left;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .contactSection .contactInfo .titleSection {
     width: 300px;
   }
@@ -491,7 +511,7 @@ nav .Link {
   width: 50%;
   height: 100%;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .contactSection .formInfo {
     width: 100%;
   }
@@ -556,10 +576,11 @@ nav .Link {
   margin-top: 20px;
   padding: 15px;
   border-radius: 20px;
+  font-weight: 900;
   font-size: 26px;
   color: black;
   border: none;
-  background: radial-gradient(circle, rgb(197, 197, 197) 0%, rgb(154, 150, 150) 89%, rgba(227, 224, 224, 0.44) 100%);
+  background: radial-gradient(circle, rgb(71, 70, 70) 0%, rgb(71, 71, 71) 89%, rgba(89, 88, 88, 0.44) 100%);
   transition: 1s all;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -577,7 +598,7 @@ nav .Link {
 .AboutContainer .characterRole h2 {
   font-size: 152px;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .AboutContainer .characterRole h2 {
     font-size: 100px;
   }
@@ -593,7 +614,10 @@ nav .Link {
   align-items: center;
 }
 .AboutContainer .AboutInfo p {
-  width: 90%;
+  font-size: 1.8rem;
+  width: 40%;
+  font-weight: 400;
+  line-height: 122.376%;
 }
 .AboutContainer .journeyContainer {
   font-family: "Headlines";
@@ -608,7 +632,7 @@ nav .Link {
   margin-left: 150px;
   font-size: 52px;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .AboutContainer .journeyContainer li {
     margin-left: 34px;
   }
@@ -631,7 +655,7 @@ nav .Link {
   font-size: 200px;
   margin-bottom: -30px;
 }
-@media (max-width: 425px) {
+@media (max-width: 740px) {
   .projetContainer .titleSection {
     font-size: 100px;
   }

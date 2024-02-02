@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 export default function Textmove() {
   useGSAP(() => {
     // gsap code here...
-    gsap.fromTo(".text", {x:"-25%"},{x:"0%",repeat: -1,duration: 20, ease:"none" })
+    gsap.fromTo(".text", {x:"-25%"},{x:"0%",repeat: -1,duration: 50, ease:"none" })
 
 
   

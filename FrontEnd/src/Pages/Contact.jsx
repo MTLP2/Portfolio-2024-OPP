@@ -3,8 +3,15 @@ import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import axios from 'axios';
 import {Helmet} from "react-helmet";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ContactForm = () => {
+
+    useEffect(() => {
+        document.documentElement.scrollTo(0, 0);
+      }, [location.pathname]);
+
     const [isSubmitted, setIsSubmitted] = useState(false); // État pour gérer la confirmation
 
     // États initiaux étendus pour inclure les menus déroulants
@@ -37,7 +44,7 @@ const ContactForm = () => {
     const onSubmit = (values, { setSubmitting }) => {
         
         // Envoi des données du formulaire via Axios
-        axios.post('http://193.203.169.220/api/send', values)
+        axios.post('https://matheolopes.com/api/send', values)
         .then(response => {
             console.log('Message envoyé', response); // Traitement en cas de succès
             setSubmitting(false); // Mise à jour de l'état de soumission
@@ -53,12 +60,14 @@ const ContactForm = () => {
     return (
       <div className='principalContainer contactSection'>
         <Helmet>
-        <title>My Title</title>
+        <title>Contactez Matheo Lopes | Developer Web</title>
         <meta name="description" content="Helmet application" />
     </Helmet>
         <div className="contactInfo">
           <h2 className='titleSection'>Work with Me</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dicta consequuntur libero iure, veniam tenetur neque a, cum veritatis magnam minima molestiae at nobis est expedita officiis quis non error commodi quasi nulla odio laborum odit praesentium! Magni obcaecati voluptas commodi iusto a, ducimus ipsa veritatis, explicabo quae omnis nesciunt dignissimos quas porro architecto eius illo fuga! Ea ex nam expedita, fugit vel dolor deserunt ut harum! Laborum illum reiciendis earum eum facilis incidunt ad, quam harum! Maiores ipsa voluptas odio commodi asperiores dolorum unde sit deleniti, laudantium voluptatem accusamus alias. Nesciunt nihil natus amet voluptatem minus corrupti necessitatibus pariatur.</p>
+          <p>Êtes-vous prêt à propulser votre présence en ligne avec un développement web sur mesure qui dynamisera votre entreprise et rehaussera votre image de marque ? <br /> <br />
+          Profitez d'un rendez-vous initial et d'un devis gratuits pour discuter de vos idées et voir comment nous pouvons les réaliser ensemble. <br /> <br />
+          Pour planifier votre consultation sans engagement, remplissez ce formulaire ou, si vous préférez une approche directe, envoyez-moi un email à matheo@matheolopes.com.</p>
 
         </div>
         <div className="formInfo">
