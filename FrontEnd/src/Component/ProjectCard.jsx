@@ -1,15 +1,19 @@
 import React from 'react'
 import Tag from './Tag'
+import { Link, NavLink } from 'react-router-dom'
 
-export default function ProjectCard({title, text, imageUrl,tags, addToRefs}) {
+
+export default function ProjectCard({title, text, imageUrl,tags, addToRefs, linkproject}) {
   return (
-    <div className="projectItem" ref={addToRefs}>
-            <img src={imageUrl} alt="Kasa project" />
-            <div className="projectInfo">
-                <h3>{title}</h3>
-                <Tag tags={tags}/>
+    <Link className='Link' to={linkproject}>
+      <div className="projectItem" ref={addToRefs}>
+              <img src={imageUrl} alt="Kasa project" />
+              <div className="projectInfo">
+                  <h3>{title}</h3>
+                  <Tag tags={tags}/>
 
-            </div>
-        </div>
+              </div>
+          </div>
+    </Link>
   )
 }

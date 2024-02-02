@@ -39,7 +39,7 @@ export default function MyComponent({data}) {
   return (
     <div className='projectContainer'>
         {data.map((element)=>(
-            <ProjectCard title={element.title} text={element.text} imageUrl={element.imageUrl} tags={element.tags} addToRefs={addToRefs} />
+            <ProjectCard title={element.title} text={element.text} imageUrl={element.imageUrl} tags={element.tags} addToRefs={addToRefs} linkproject={element.linkproject} />
           ))}
     </div>
   );
