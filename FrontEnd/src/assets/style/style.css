@@ -67,10 +67,27 @@ nav .Link {
   margin-top: 300px;
   margin-bottom: 120px;
 }
+@media (max-width: 740px) {
+  .principalContainer .characterRole {
+    margin-top: 150px;
+  }
+}
 .principalContainer .characterRole img {
   background-color: blue;
   width: 30%;
-  height: 60%;
+  height: 50%;
+}
+@media (max-width: 740px) {
+  .principalContainer .characterRole img {
+    width: 80%;
+    height: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .principalContainer .characterRole img {
+    width: 50%;
+    height: 50%;
+  }
 }
 .principalContainer .characterRole h2 {
   font-size: 55px;

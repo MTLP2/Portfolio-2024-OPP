@@ -26,11 +26,28 @@
         margin-top: 300px;
         margin-bottom: 120px;
 
+        @include for-phone{
+            margin-top: 150px;
+    
+        }
 
         img{
             background-color: blue;
             width: 30%;
-            height: 60%;
+            height: 50%;
+
+            @include for-phone{
+                width: 80%;
+                height: 40%;
+                
+        
+            }
+            @include for-tablet{
+                width: 50%;
+                height: 50%;
+                
+        
+            }
         }
 
         h2{
