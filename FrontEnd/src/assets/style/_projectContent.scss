@@ -32,6 +32,11 @@
             font-family: $titlefont;
             font-size: 62px;
             padding-left: 30px;
+
+            @include for-phone{
+                font-size: 30px;
+        
+            }
         }
 
         .projectInfo .containerTag{

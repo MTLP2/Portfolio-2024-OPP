@@ -287,6 +287,11 @@ nav .Link {
   font-size: 62px;
   padding-left: 30px;
 }
+@media (max-width: 740px) {
+  .projectContainer .projectItem h3 {
+    font-size: 30px;
+  }
+}
 .projectContainer .projectItem .projectInfo .containerTag {
   padding-left: 30px;
   padding-bottom: 20px;
@@ -604,7 +609,7 @@ nav .Link {
 }
 @media (max-width: 740px) {
   .AboutContainer .characterRole h2 {
-    font-size: 100px;
+    font-size: 90px;
   }
 }
 .AboutContainer p {
@@ -622,6 +627,12 @@ nav .Link {
   width: 40%;
   font-weight: 400;
   line-height: 122.376%;
+}
+@media (max-width: 740px) {
+  .AboutContainer .AboutInfo p {
+    width: 100%;
+    font-size: 1.3rem;
+  }
 }
 .AboutContainer .journeyContainer {
   font-family: "Headlines";
