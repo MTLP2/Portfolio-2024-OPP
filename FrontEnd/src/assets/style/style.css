@@ -77,16 +77,16 @@ nav .Link {
   width: 30%;
   height: 50%;
 }
-@media (max-width: 740px) {
-  .principalContainer .characterRole img {
-    width: 80%;
-    height: 40%;
-  }
-}
 @media (max-width: 768px) {
   .principalContainer .characterRole img {
     width: 50%;
     height: 50%;
+  }
+}
+@media (max-width: 740px) {
+  .principalContainer .characterRole img {
+    width: 80%;
+    height: 40%;
   }
 }
 .principalContainer .characterRole h2 {

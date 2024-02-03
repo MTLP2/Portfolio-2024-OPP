@@ -36,15 +36,16 @@
             width: 30%;
             height: 50%;
 
-            @include for-phone{
-                width: 80%;
-                height: 40%;
-                
-        
-            }
             @include for-tablet{
                 width: 50%;
                 height: 50%;
+                
+                
+            }
+            
+            @include for-phone{
+                width: 80%;
+                height: 40%;
                 
         
             }
