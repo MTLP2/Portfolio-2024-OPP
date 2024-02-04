@@ -70,5 +70,10 @@
             margin-left: 35%;
     
         }
+
+        @include for-phone{
+            margin-left: 0%;
+            margin: 40px;
+        }
     }
 }

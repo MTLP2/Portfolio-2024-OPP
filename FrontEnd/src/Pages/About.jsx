@@ -28,7 +28,7 @@ export default function About() {
         // gsap code here...
         timeline.from(".imgCharacter", {duration: 1, scaleX: 0});
         timeline.to(".imgCharacter", {scaleX:1})
-        timeline.fromTo(".titleCharacter", {opacity:0, y: -700},{opacity:1, y: -460, delay:1}, "+0.1")
+        timeline.fromTo(".titleCharacter", {opacity:0, y: -700},{opacity:1, y: -560, delay:1}, "+0.1")
         timeline.fromTo(".animationbottom ", {opacity:0, y: 30},{opacity:1, y: 0, delay:1}, "+1")
 
 
