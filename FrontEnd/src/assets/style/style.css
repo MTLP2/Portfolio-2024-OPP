@@ -64,8 +64,8 @@ nav .Link {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
-  margin-bottom: 120px;
+  margin-top: 115px;
+  margin-bottom: -28px;
 }
 @media (max-width: 740px) {
   .principalContainer .characterRole {
