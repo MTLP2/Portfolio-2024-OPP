@@ -53,11 +53,11 @@ export default function About() {
       <ul className='journeyContainer'>
         <h3>2023</h3>
         <li>THREEJOURNEY</li>
-        <li>OPPENCLASSROOM</li>
+        <li>OPENCLASSROOM</li>
         <h3>2022</h3>
         <li>MYDIGITALSCHOOL</li>
         <h3>2020</h3>
-        <li>Lycee Marie Laurentcin</li>
+        <li>Lycee MARIE LAURENCIN / NSI</li>
       </ul>
       </div>
     <Footer/>
