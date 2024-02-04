@@ -26,6 +26,10 @@
             height: 75%;
             top: -40px;
 
+            @include for-phone{
+                top: -85px;
+
+            }
             
         }
         h3{
@@ -44,6 +48,10 @@
             padding-bottom: 20px;
             gap: 20px;
             display: flex;
+
+            @include for-phone{
+                flex-wrap: wrap;
+            }
 
 
             h4{

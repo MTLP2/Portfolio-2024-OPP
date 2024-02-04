@@ -32,9 +32,11 @@
         }
 
         img{
-            background-color: blue;
+            object-fit: cover;
             width: 30%;
-            height: 50%;
+            height: 60%;
+            border: 5px solid rgb(32, 32, 32);
+            border-radius: 20px;
 
             @include for-tablet{
                 width: 50%;

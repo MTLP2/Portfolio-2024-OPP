@@ -27,11 +27,11 @@ export default function Accueil({data}) {
     const timeline = gsap.timeline()
     useGSAP(() => {
         // gsap code here...
-        timeline.from(".imgCharacter", {duration: 2, scaleY: 0});
+        timeline.from(".imgCharacter", {duration: 1, scaleY: 0});
         timeline.to(".imgCharacter", {scaleY:1})
-        timeline.fromTo(".titleCharacter", {opacity:0, y: 30},{opacity:1, y: 0, delay:1}, "+1")
-        timeline.fromTo(".secondContainer ", {opacity:0, y: 30},{opacity:1, y: 0, delay:1}, "+2")
-        timeline.fromTo(".textMove ", {opacity:0, y: 30},{opacity:1, y: 0, delay:1}, "+2")
+        timeline.fromTo(".titleCharacter", {opacity:0, y: 30},{opacity:1, y: 0, delay:0.5}, "+0.5")
+        timeline.fromTo(".secondContainer ", {opacity:0, y: 30},{opacity:1, y: 0, delay:1}, "+1")
+        timeline.fromTo(".textMove ", {opacity:0, y: 30},{opacity:1, y: 0, delay:1}, "+1")
 
 
       
