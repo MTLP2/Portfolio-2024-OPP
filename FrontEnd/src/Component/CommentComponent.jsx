@@ -71,7 +71,7 @@ export default function App() {
             <SwiperSlide >
                     <p >{element.text}</p>
                     <h3>{element.author}</h3>
-                    <img src={element.imageUrl} alt="" />
+                    <img src={element.imgUrl} alt="" />
             </SwiperSlide>
           ))}
 
