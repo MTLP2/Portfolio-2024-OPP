@@ -57,7 +57,7 @@ export default function About() {
         <h3>2022</h3>
         <li>MYDIGITALSCHOOL</li>
         <h3>2020</h3>
-        <li>Lycee MARIE LAURENCIN / NSI</li>
+        <li>Lycee MARIE LAURENCIN - NSI</li>
       </ul>
       </div>
     <Footer/>
