@@ -90,7 +90,9 @@ const ContactForm = () => {
                 <Field className="Field" as="select" name="projectType">
                     <option value="">Sélectionnez le type de projet</option>
                     <option value="web">Développement Web</option>
-                    <option value="mobile">Développement Mobile</option>
+                    <option value="web">Integration web</option>
+                    <option value="mobile">3D Web Développement</option>
+                    <option value="mobile">WordPress/Prestashop</option>
                     <option value="autre">Autre</option>
                 </Field>
                 <ErrorMessage name="projectType" component="div" />
