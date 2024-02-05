@@ -54,8 +54,9 @@ const transporter = nodemailer.createTransport({
     user: 'matheo@matheolopes.com', // Ton adresse email complète
     pass: 'DCRvDbxfwc' // Ton mot de passe
   },
-  debug: true,
-  logger: true
+  tls: {
+    rejectUnauthorized: false // Ajoute cette ligne pour ignorer les erreurs de certificat
+  }
 });
 
 app.post('/api/send', (req, res) => {
