@@ -53,7 +53,9 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: 'matheo@matheolopes.com', // Ton adresse email complète
     pass: 'DCRvDbxfwc' // Ton mot de passe
-  }
+  },
+  debug: true,
+  logger: true
 });
 
 app.post('/api/send', (req, res) => {
