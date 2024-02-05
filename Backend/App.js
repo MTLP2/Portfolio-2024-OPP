@@ -47,10 +47,16 @@ app.get('/api/comment', (req, res, next) => {
 
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // Utilisez votre service de messagerie
+  host: 'mail.matheolopes.com', // L'adresse de ton serveur mail
+  port: 80, // ou un autre port selon ta configuration
+  secure: false, // true pour le port 465, false pour d'autres ports
   auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS
+    user: process.env.MAIL_USER, // Ton adresse mail
+    pass: process.env.MAIL_PASS // Le mot de passe de ton adresse mail
+  },
+  tls: {
+    // Ces options peuvent être nécessaires si le serveur a un certificat auto-signé
+    rejectUnauthorized: false
   }
 });
 
