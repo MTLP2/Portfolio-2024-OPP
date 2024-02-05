@@ -47,16 +47,12 @@ app.get('/api/comment', (req, res, next) => {
 
 
 const transporter = nodemailer.createTransport({
-  host: 'mail.matheolopes.com', // L'adresse de ton serveur mail
-  port: 465, // ou un autre port selon ta configuration
-  secure: true, // true pour le port 465, false pour d'autres ports
+  host: 'mail.matheolopes.com', // Remplace par ton domaine
+  port: 587, // Port SMTP standard pour la soumission de mails
+  secure: false, // Pour le port 587, cette option doit être false
   auth: {
-    user: process.env.MAIL_USER, // Ton adresse mail
-    pass: process.env.MAIL_PASS // Le mot de passe de ton adresse mail
-  },
-  tls: {
-    // Ces options peuvent être nécessaires si le serveur a un certificat auto-signé
-    rejectUnauthorized: false
+    user: 'matheo@matheolopes.com', // Ton adresse email complète
+    pass: 'DCRvDbxfwc' // Ton mot de passe
   }
 });
 
