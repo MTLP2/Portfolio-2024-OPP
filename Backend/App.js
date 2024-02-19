@@ -51,8 +51,8 @@ const transporter = nodemailer.createTransport({
   port: 587, // Port SMTP standard pour la soumission de mails
   secure: false, // Pour le port 587, cette option doit être false
   auth: {
-    user: 'matheo@matheolopes.com', // Ton adresse email complète
-    pass: 'DCRvDbxfwc' // Ton mot de passe
+    user: process.env.MAIL_USER, // Ton adresse email complète
+    pass: process.env.MAIL_PASS // Ton mot de passe
   },
   tls: {
     rejectUnauthorized: false // Ajoute cette ligne pour ignorer les erreurs de certificat
