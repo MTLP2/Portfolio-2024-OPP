@@ -1,8 +1,6 @@
 import React from 'react'
-import { useRef } from "react";
 import {Helmet} from "react-helmet";
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";

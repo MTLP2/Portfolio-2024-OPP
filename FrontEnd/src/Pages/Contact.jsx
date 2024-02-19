@@ -4,7 +4,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import axios from 'axios';
 import {Helmet} from "react-helmet";
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link} from 'react-router-dom'
+
 
 const ContactForm = () => {
 
@@ -36,6 +37,9 @@ const ContactForm = () => {
         }
         if (!values.projectUrgency) {
             errors.projectUrgency = 'Urgence du projet requise';
+        }
+        if (!values.termsAccepted) {
+            errors.termsAccepted = 'Vous devez accepter les conditions générales d\'utilisation.';
         }
         return errors;
     };
@@ -106,6 +110,10 @@ const ContactForm = () => {
                     <option value="haute">Haute</option>
                 </Field>
                 <ErrorMessage name="projectUrgency" component="div" />
+                <label>
+                    <Field type="checkbox" name="termsAccepted" />J'accepte les <Link to="/CGU">conditions générales d'utilisation</Link>
+                </label>
+                <ErrorMessage name="termsAccepted" component="div" />
 
                 <button className='defaultButton' type="submit">Envoyer</button>
                 {/* Message de confirmation */}
