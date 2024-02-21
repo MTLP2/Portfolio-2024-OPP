@@ -27,7 +27,9 @@
             top: -40px;
 
             @include for-phone{
-                top: -85px;
+
+                height: 68%;
+                object-fit: fill;
 
             }
             

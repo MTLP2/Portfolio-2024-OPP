@@ -304,7 +304,9 @@ nav .Link {
 }
 @media (max-width: 740px) {
   .projectContainer .projectItem img {
-    top: -85px;
+    height: 68%;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 .projectContainer .projectItem h3 {
