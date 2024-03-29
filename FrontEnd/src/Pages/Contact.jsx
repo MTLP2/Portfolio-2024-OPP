@@ -78,7 +78,7 @@ const ContactForm = () => {
           <Formik initialValues={initialValues} validate={validate} onSubmit={onSubmit}>
             <Form>
                 <label htmlFor="name">Nom</label>
-                <Field className="Field" type="text" name="name" placeholder="Full name" />
+                <Field className="Field" type="text" name="name" placeholder="Nom complet" />
                 <ErrorMessage name="name" component="div" />
 
                 <label htmlFor="email">Email</label>
@@ -86,7 +86,7 @@ const ContactForm = () => {
                 <ErrorMessage name="email" component="div" />
 
                 <label htmlFor="message">Message</label>
-                <Field className="Field Field-message" as="textarea" name="message" placeholder="Enter here..." />
+                <Field className="Field Field-message" as="textarea" name="message" placeholder="Entrer ici..." />
                 <ErrorMessage name="message" component="div" />
 
                 {/* Menu déroulant pour le type de projet */}

@@ -8,8 +8,8 @@ export default function Nav() {
     <nav className='nav'>
         <NavLink className={"Link"} to="/"><h2>MATHEO LOPES</h2></NavLink>
         <ul>
-            <li><NavLink className={"Link"} to="/About">ABOUT</NavLink></li>
-            <li><NavLink className={"Link"} to="/Project">PROJET</NavLink></li>
+            <li><NavLink className={"Link"} to="/About">A PROPOS</NavLink></li>
+            <li><NavLink className={"Link"} to="/Project">PROJETS</NavLink></li>
             <li><NavLink className={"Link"} to="/Contact">CONTACT</NavLink></li>
 
         </ul>

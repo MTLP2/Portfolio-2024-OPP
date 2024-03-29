@@ -51,22 +51,22 @@ export default function Accueil({data}) {
                     <p>Je suis Mathéo Lopes, un développeur web basé à Paris avec une expertise forgée sur de nombreuses années de programmation. Ma passion me pousse à transformer vos visions en réalités digitales, spécialisé dans le développement sur mesure, depuis la modélisation 3D innovante jusqu'aux sites web classiques, avec un souci constant pour l'organisation et la qualité.
                         <br /> <br />
                     Mon approche met l'accent sur l'esthétique et la fonctionnalité, visant à offrir une bonne expérience utilisateur. Je propose mes services aux entreprises B2B et B2C, offrant des solutions web personnalisées qui répondent à une gamme variée d'exigences. Mon but est de livrer des projets qui allient beauté, innovation, et performance.</p>
-                    <ButtonLink link={'/Project'} name={"VIEW MY WORK"}/>
+                    <ButtonLink link={'/Project'} name={"VOIR MES PROJETS"}/>
                 </div>
                 <ul>
-                    <li><h2>Availible for</h2></li>
+                    <li><h2>Disponible pour:</h2></li>
                     <li>Fullstack Développeur Web</li>
                     <li>3D Web Développement</li>
                     <li>WordPress/PrestaShop</li>
                     <li>Intégrateur Web </li>
                 </ul>
             </div>
-            <h2 className='titleSection'>COMPETENCE</h2>
+            <h2 className='titleSection'>COMPETENCES</h2>
             <Skillbox/>
-            <h2 className='titleSection'>PROJECT</h2>
+            <h2 className='titleSection'>PROJETS</h2>
             <ProjetComponent data={data}/>
-            <ButtonLink link={'/Project'} name={"SEE MY OTHER WORK"}/>
-            <h2 className='titleSection'>Testimonies</h2>
+            <ButtonLink link={'/Project'} name={"VOIR MES PROJETS"}/>
+            <h2 className='titleSection'>RECOMMANDATIONS</h2>
             <CommentComponent/>
             
             
