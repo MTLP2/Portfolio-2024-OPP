@@ -16,7 +16,7 @@ export default function Project({data}) {
         <title>Projets de Matheo Lopes | Developer Web</title>
         <meta name="description" content="Contactez Matheo Lopes pour vos besoins en développement web à Paris et au-delà. Avec compétences en Three.js, JavaScript, React, Node.js, et WordPress, je suis votre partenaire pour des solutions web réussies, en français et anglais." />
     </Helmet>
-      <h2 className='titleSection'>Projet</h2>
+      <h2 className='titleSection text-[40px] lg:text-[80px] font-[RubikOne]'>Projet</h2>
       <ProjetComponent data={data}/>
     <Footer/>
 

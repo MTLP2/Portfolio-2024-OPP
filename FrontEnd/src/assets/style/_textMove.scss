@@ -12,7 +12,6 @@
     h2{
         position: relative;
         font-size: 252px;
-        font-family: $titlefont;
     }
     h2::before {
         content:attr(data-text);

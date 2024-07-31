@@ -45,11 +45,21 @@ export default function About() {
 
       
       <div className="AboutInfo">
-        <p>Je suis Mathéo Lopes, votre Développeur Web basé à Paris, où les croissants sont aussi importants pour moi que les lignes de code. Mon voyage dans le monde du développement web a commencé au lycée, avec la création d'une to-do list (si épique). Depuis, je n'ai cessé de plonger tête la première dans des projets allant d'un site pour une association alimentaire - à des inventions plus personnelles comme un site de notation de livres pour ceux d'entre nous qui oublient ce qu'ils ont lu la semaine dernière. <br /> <br /> Mon amour pour le design et les expériences visuelles m'a conduit à explorer des expositions tech, à suivre des événements, et à rejoindre ou créer des groupes de développeurs <br /> <br /> En tant que freelance, je me spécialise dans le developpement d'e-commerces, à des sites 3D modernes qui font dire "Wow" plutôt que "Hmm", des portfolios qui montrent votre travail sous son meilleur jour, jusqu'à des sites de présentation pour faire briller votre commerce.Besoin d'une API, Je suis là.  Ou alors l'intégration d'une maquette, je suis la aussi. <br /> <br />Entre deux lignes de code, je garde un œil sur une vie équilibrée, avec une touche de sport pour m'assurer que je suis aussi agile physiquement que mentalement. J'ai aussi développé une application Pomodoro combinée à une radio en ligne pour garder ma productivité tout au long de la journée .Si vous êtes à la recherche d'un professionnel capable de concrétiser vos visions digitales, avec un soupçon de légèreté dans le processus, ne cherchez plus. Je suis ici pour transformer vos idées en projets numériques engageants, qui captivent, convainquent, et convertissent. Ensemble, travaillons à réaliser vos projets numériques de manière à ce qu'ils se distinguent, touchent votre public cible et contribuent au succès de vos ambitions. Qui sait ? Notre collaboration pourrait aboutir à des réalisations dignes d'attention et de reconnaissance .</p>
+        <p>Je suis Mathéo Lopes, développeur web basé à Paris, où je crée des solutions digitales aussi indispensables que les croissants du matin. Mon parcours dans le développement web a commencé avec une to-do list épique, et depuis, je n'ai cessé d'explorer et de perfectionner mon art. <br /> <br />
+
+        Avec une spécialisation en React, Node.js, et Next.js, je me concentre sur des projets allant des e-commerces performants aux sites 3D modernes qui suscitent l'admiration. J'ai également travaillé sur des portfolios élégants et des sites de présentation qui mettent en valeur les entreprises sous leur meilleur jour. Que vous ayez besoin d'une API robuste ou de l'intégration parfaite d'une maquette, je suis là pour vous.<br /> <br />
+
+        Mon expérience récente m'a permis de collaborer avec divers clients dans des secteurs variés, comme l'immobilier, les PME, et le développement de CRM pour le marché du diagnostic immobilier. J'ai conçu des algorithmes personnalisés pour des diagnostics de terrains, et travaillé en équipe selon des méthodologies agiles pour garantir une organisation sans faille.<br /> <br />
+
+        En tant que freelance, j'accompagne mes clients de A à Z avec des réunions hebdomadaires, en optimisant leur SEO et en utilisant des outils comme Google Analytics, Google My Business, et AWS. Je m'occupe également des déploiements sur VPS et Vercel, assurant des solutions complètes et adaptées à leurs besoins.<br /> <br />
+
+        Lorsque je ne code pas, je veille à maintenir un équilibre de vie avec du sport pour rester agile mentalement et physiquement. J'ai aussi développé une application Pomodoro combinée à une radio en ligne pour maximiser ma productivité tout au long de la journée.<br /> <br />
+
+        Si vous recherchez un développeur web capable de s'intégrer efficacement à votre équipe et de concrétiser vos visions digitales, je suis prêt à collaborer avec vous. Ensemble, nous créerons des solutions numériques performantes qui se distinguent et répondent aux besoins de votre public cible. Mon expertise et mon approche professionnelle garantiront le succès de vos projets.</p>
 
       </div>
       <ButtonLink link={'/Contact'} name={"ME CONTACTER"}/>
-      <h2 className='titleSection'>MON PARCOURS</h2>
+      <h2 className='titleSection text-[40px] lg:text-[80px] font-[RubikOne]'>MON PARCOURS</h2>
       <ul className='journeyContainer'>
         <h3>2023</h3>
         <li>THREEJOURNEY</li>

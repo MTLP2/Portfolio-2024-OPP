@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 ::before,
 ::after {
@@ -5,6 +9,16 @@
   margin: 0;
   padding: 0;
 }
+
+
+@font-face {
+  font-family: 'RubikOne';
+  src: url('/fonts/rubik-one/RubikOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 @font-face {
   font-family: Headlines;
@@ -94,7 +108,6 @@ nav .Link {
 }
 .principalContainer .characterRole h2 {
   font-size: 55px;
-  font-family: "Headlines";
   color: #CAC9CB;
 }
 .principalContainer .characterInfo {
@@ -110,7 +123,7 @@ nav .Link {
   }
 }
 .principalContainer .characterInfo p {
-  font-size: 28px;
+  font-size: 24px;
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -154,72 +167,34 @@ nav .Link {
   width: 100%;
   color: #CAC9CB;
   padding-top: 200px;
-  font-size: 150px;
   z-index: 99;
   position: relative;
-  font-family: "Headlines";
   font-display: swap;
 }
-@media (max-width: 740px) {
-  .principalContainer .titleSection {
-    font-size: 70px;
-  }
-}
+
 
 .skillBox {
   display: flex;
   justify-content: center;
-  gap: 40px;
   color: #CAC9CB;
   background: rgb(29, 29, 29);
   background: radial-gradient(circle, rgb(29, 29, 29) 0%, rgb(44, 43, 43) 89%, rgba(79, 77, 77, 0.44) 100%);
   border-radius: 10px;
-  margin-top: -50px;
+  margin-top: -30px;
   width: 100%;
   padding: 100px;
 }
-@media (max-width: 1024px) {
-  .skillBox {
-    flex-direction: column;
-  }
-}
-@media (max-width: 740px) {
-  .skillBox {
-    padding: 50px;
-  }
-}
+
+
 .skillBox .skillBoxUnique {
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 300px;
-  gap: 10px;
 }
-@media (max-width: 740px) {
-  .skillBox {
-    width: 100%;
-  }
-}
-.skillBox .skillBoxUnique h3 {
-  font-size: 36px;
-}
-@media (max-width: 1024px) {
-  .skillBox .skillBoxUnique h3 {
-    font-size: 20px;
-    width: 500px;
-  }
-}
-@media (max-width: 1024px) {
-  .skillBox .skillBoxUnique h3 {
-    font-size: 20px;
-    width: 0px;
-  }
-}
-@media (max-width: 740px) {
-  .skillBox .skillBoxUnique h3 {
-    width: 0px;
-  }
-}
+
+
+
 .skillBox p {
   font-size: 20px;
 }
@@ -238,21 +213,6 @@ nav .Link {
     width: 220px;
   }
 }
-.skillBox .skillBoxUnique:nth-child(1) {
-  color: rgb(181, 181, 0);
-}
-.skillBox .skillBoxUnique:nth-child(2) {
-  color: rgb(0, 109, 181);
-}
-.skillBox .skillBoxUnique:nth-child(3) {
-  color: rgb(1, 126, 28);
-}
-.skillBox .skillBoxUnique:nth-child(4) {
-  color: rgb(234, 82, 171);
-}
-.skillBox .skillBoxUnique:nth-child(5) {
-  color: rgb(252, 54, 74);
-}
 
 .textMove {
   display: flex;
@@ -268,7 +228,6 @@ nav .Link {
 .textMove h2 {
   position: relative;
   font-size: 252px;
-  font-family: "Headlines";
 }
 .textMove h2::before {
   content: attr(data-text);
@@ -310,8 +269,7 @@ nav .Link {
   }
 }
 .projectContainer .projectItem h3 {
-  font-family: "Headlines";
-  font-size: 62px;
+  font-size: 42px;
   padding-left: 30px;
 }
 @media (max-width: 740px) {
@@ -332,11 +290,10 @@ nav .Link {
 }
 .projectContainer .projectItem .projectInfo .containerTag h4 {
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 16px;
   background-color: rgb(98, 97, 97);
   color: black;
   padding: 20px;
@@ -376,7 +333,7 @@ nav .Link {
   width: 50px !important;
 }
 .swiper-slide p {
-  font-size: 26px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 @media (max-width: 1024px) {
@@ -418,25 +375,24 @@ nav .Link {
   cursor: pointer;
   border: 5px solid rgba(48, 48, 48, 0.134);
   border-radius: 180px;
-  font-size: 222px;
+  font-size: 130px;
   height: 100%;
   padding: 30px;
-  font-family: "Headlines";
   transition: 1s all;
 }
 @media (max-width: 1024px) {
   .contactContainer .contactme {
-    font-size: 150px;
+    font-size: 80px;
   }
 }
 @media (max-width: 768px) {
   .contactContainer .contactme {
-    font-size: 119px;
+    font-size: 69px;
   }
 }
 @media (max-width: 740px) {
   .contactContainer .contactme {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 .contactContainer .contactme:hover {
@@ -540,7 +496,6 @@ nav .Link {
 }
 @media (max-width: 768px) {
   .contactSection .contactInfo .titleSection {
-    font-size: 70px;
     text-align: center;
   }
 }
@@ -710,11 +665,5 @@ nav .Link {
   color: white;
 }
 .projetContainer .titleSection {
-  font-size: 200px;
   margin-bottom: -30px;
 }
-@media (max-width: 740px) {
-  .projetContainer .titleSection {
-    font-size: 100px;
-  }
-}/*# sourceMappingURL=style.css.map */

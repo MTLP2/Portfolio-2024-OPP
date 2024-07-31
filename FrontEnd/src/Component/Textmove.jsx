@@ -13,8 +13,8 @@ export default function Textmove() {
   })
 
   return (
-    <div className='textMove'>
-        <h2 data-text="DEVELOPPEUR WEB - DEVELOPPEUR WEB - DEVELOPPEUR WEB - DEVELOPPEUR WEB - DEVELOPPEUR WEB - DEVELOPPEUR WEB - DEVELOPPEUR WEB - DEVELOPPEUR WEB" className='text'>DEVELOPPEUR WEB DEVELOPPEUR WEB DEVELOPPEUR WEB DEVELOPPEUR WEB DEVELOPPEUR WEB DEVELOPPEUR WEB DEVELOPPEUR WEB DEVELOPPEUR WEB</h2>
+    <div className=' font-[RubikOne] textMove'>
+        <h2 data-text="DEVELOPPEUR WEB - React - NodeJs - Next- DEVELOPPEUR WEB - React - NodeJs - Next " className='text'>DEVELOPPEUR WEB - React - NodeJs - Next- DEVELOPPEUR WEB - React - NodeJs - Next -  DEVELOPPEUR WEB</h2>
     </div>
   )
 }

@@ -9,7 +9,7 @@ export default function ProjectCard({title, text, imageUrl,tags, addToRefs, link
       <div className="projectItem" ref={addToRefs}>
               <img src={imageUrl} alt={title} />
               <div className="projectInfo">
-                  <h3>{title}</h3>
+                  <h3 className=' font-[RubikOne]'>{title}</h3>
                   <Tag tags={tags}/>
 
               </div>
