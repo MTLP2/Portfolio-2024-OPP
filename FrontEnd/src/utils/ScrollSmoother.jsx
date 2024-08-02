@@ -1,5 +1,4 @@
-// src/utils/ScrollSmoother.js
-'use client'
+// src/Components/ScrollSmoother.js
 import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { gsap } from 'gsap';
@@ -29,7 +28,9 @@ const ScrollSmoother = ({ children }) => {
 
     ScrollTrigger.scrollerProxy(containerRef.current, {
       scrollTop(value) {
-        return arguments.length ? lenis.scrollTo(value, { offset: 0 }) : lenis.animatedScroll;
+        return arguments.length
+          ? lenis.scrollTo(value, { offset: 0 })
+          : lenis.animatedScroll;
       },
       getBoundingClientRect() {
         return {
@@ -42,12 +43,10 @@ const ScrollSmoother = ({ children }) => {
       pinType: containerRef.current.style.transform ? 'transform' : 'fixed',
     });
 
-    ScrollTrigger.addEventListener("refresh", () => lenis.update());
     ScrollTrigger.refresh();
 
     return () => {
       lenis.destroy();
-      ScrollTrigger.removeEventListener("refresh", () => lenis.update());
     };
   }, []);
 
