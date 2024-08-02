@@ -87,7 +87,7 @@ export default function Blog() {
           </div>
         </div>
         <p className='font-bold text-center' ref={textRef}>
-          Ici, vous trouverez les dernières nouvelles du monde de la tech, des articles approfondis sur React, Next.js, et bien d'autres technologies modernes. Explorez des tutoriels, des animations captivantes, et des astuces pour rester à la pointe de l'innovation. Que vous soyez un développeur débutant ou expérimenté, ce blog est votre destination pour tout ce qui concerne la tech.
+          🔥 Ici, vous trouverez les dernières nouvelles du monde de la tech, des articles approfondis sur React, Next.js, et bien d'autres technologies modernes. Explorez des tutoriels, des animations captivantes, et des astuces pour rester à la pointe de l'innovation. Que vous soyez un développeur débutant ou expérimenté, ce blog est votre destination pour tout ce qui concerne la tech. 🏝️
         </p>
         <img ref={img1Ref} className='absolute w-[500px] -top-[110px] right-[8%] h-[500px] transform mt-28 -rotate-[160deg]' src="/img/Palm.png" alt="Palm 1" />
         <img ref={img2Ref} className='absolute w-[500px] -left-[12%] h-[600px] transform mt-28 rotate-[40deg]' src="/img/Palm.png" alt="Palm 2" />
