@@ -17,6 +17,7 @@ import Contact from './Pages/Contact';
 import Project from './Pages/Project';
 import CGU from './Pages/CGU';
 import Blog from './Pages/Blog';
+import Articles from './Pages/Articles/Articles';
 
 function App() {
   const [data, setData] = useState([]);
@@ -51,6 +52,7 @@ function App() {
               <Route path='*' element={<Accueil data={dataAccueil} />} />
               <Route path='/About' element={<About />} />
               <Route path='/Le-Blog' element={<Blog/>} />
+              <Route path='/Le-Blog/article' element={<Articles/>} />
               <Route path='/Project' element={<Project data={data} />} />
               <Route path='/Contact' element={<Contact />} />
               <Route path='/CGU' element={<CGU />} />

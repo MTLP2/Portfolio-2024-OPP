@@ -12,6 +12,21 @@
 
 
 @font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'RubikBold';
+  src: url('/fonts/rubik/Rubik-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'RubikOne';
   src: url('/fonts/rubik-one/RubikOne-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -21,9 +36,10 @@
 
 
 @font-face {
-  font-family: Headlines;
+  font-family: 'Headlines';
   src: url("/fonts/HeadlinesUniB-MediumTrial.otf");
 }
+
 body {
   background-color: rgb(31, 30, 29);
 }
