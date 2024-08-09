@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +67,18 @@ export default function Blog() {
   }, []);
 
   return (
-    <section className='mt-[400px] w-full items-center gap-[200px] flex flex-col'>
+    <section className='mt-[120px] w-full items-center gap-[200px] flex flex-col'>
+      <div className=' py-40 flex flex-col text-center items-center bg-[#7ed957] text-white w-full gap-5'>
+        <ul className=' flex gap-20 text-[#f8496cc0] font-bold '>
+          <li className='border-2 p-2 bg-white border-[#f8496cc0]'>Test</li>
+          <li className='border-2 p-2 bg-white border-[#f8496cc0]'>Test</li>
+          <li className='border-2 p-2 bg-white border-[#f8496cc0]'>Test</li>
+        </ul>
+        <h1 className=' text-5xl font-bold w-[60%]'>Eco-conception en web : 10 conseils pour les développeurs</h1>
+        <div>
+          <h3 className=' font-bold'>Par Mathéo Lopes | 15 Août 2024</h3>
+        </div>
+      </div>
 
 
       <div className='flex pb-20 w-[80%]'>
