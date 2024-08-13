@@ -52,7 +52,7 @@ function App() {
               <Route path='*' element={<Accueil data={dataAccueil} />} />
               <Route path='/About' element={<About />} />
               <Route path='/Le-Blog' element={<Blog/>} />
-              <Route path='/Le-Blog/article' element={<Articles/>} />
+              <Route path='/Le-Blog/article/:slug' element={<Articles/>} />
               <Route path='/Project' element={<Project data={data} />} />
               <Route path='/Contact' element={<Contact />} />
               <Route path='/CGU' element={<CGU />} />

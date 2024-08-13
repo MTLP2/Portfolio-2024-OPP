@@ -1,10 +1,12 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import FeaturedAndLatestArticles from '../../Component/FeaturedAndLatestArticles';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Blog() {
+export default function Articles() {
   const titleRef = useRef(null);
   const textRef = useRef(null);
   const img1Ref = useRef(null);
@@ -16,20 +18,39 @@ export default function Blog() {
   const featuredArticleRef = useRef(null);
   const latestArticleRefs = useRef([]);
 
+  const { slug } = useParams();
+  
+  const [articleData, setArticleData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    // Changer le fond d'écran lorsque le composant est monté
+    fetch(`https://admindash.matheolopes.com/api/article/ReadArticle/${slug}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erreur lors de la récupération de l\'article');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setArticleData(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Erreur:', error);
+        setLoading(false);
+      });
+  }, [slug]);
+  
+  useEffect(() => {
     document.body.style.transition = 'background-color 1s ease';
     document.body.style.backgroundColor = 'white';
 
-    // Changer le style de la navigation
     const navElement = document.querySelector('nav');
     if (navElement) {
       navElement.style.transition = 'background-color 1s ease';
       navElement.style.backgroundColor = '#7ed957';
     }
 
-
-    // Animation de l'article à l'affiche
     gsap.fromTo(featuredArticleRef.current, 
       { opacity: 0, y: 50 }, 
       { opacity: 1, y: 0, duration: 1, ease: 'power2.out', 
@@ -42,7 +63,6 @@ export default function Blog() {
       }
     );
 
-    // Animation des derniers articles
     latestArticleRefs.current.forEach((article, index) => {
       gsap.fromTo(article, 
         { opacity: 0, x: 50 }, 
@@ -57,7 +77,6 @@ export default function Blog() {
       );
     });
 
-    // Nettoyage pour rétablir le fond d'écran et le style de la navigation par défaut
     return () => {
       document.body.style.backgroundColor = 'rgb(31, 30, 29)';
       if (navElement) {
@@ -68,43 +87,94 @@ export default function Blog() {
 
   return (
     <section className='mt-[120px] w-full items-center gap-[200px] flex flex-col'>
-      <div className=' py-40 flex flex-col text-center items-center bg-[#7ed957] text-white w-full gap-5'>
-        <ul className=' flex gap-20 text-[#f8496cc0] font-bold '>
-          <li className='border-2 p-2 bg-white border-[#f8496cc0]'>Test</li>
-          <li className='border-2 p-2 bg-white border-[#f8496cc0]'>Test</li>
-          <li className='border-2 p-2 bg-white border-[#f8496cc0]'>Test</li>
+      <div
+        className='py-40 flex flex-col text-center items-center bg-[#7ed957] text-white w-full gap-5 relative'
+        style={{
+          backgroundImage: articleData && !loading ? `url(${articleData.mainImageUrl})` : 'none',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-[#7ed957] opacity-90 z-0"></div>
+        <ul className='flex gap-20 text-[#f8496cc0] font-bold z-10'>
+          {!loading && articleData && articleData.tags && articleData.tags.map((tag, index) => (
+            <li key={index} className='border-2 p-2 bg-white border-[#f8496cc0]'>{tag}</li>
+          ))}
         </ul>
-        <h1 className=' text-5xl font-bold w-[60%]'>Eco-conception en web : 10 conseils pour les développeurs</h1>
-        <div>
-          <h3 className=' font-bold'>Par Mathéo Lopes | 15 Août 2024</h3>
+        <h1 className='text-5xl font-bold w-[60%] z-10'>
+          {!loading && articleData ? articleData.mainTitle : 'Chargement...'}
+        </h1>
+        <div className="z-10">
+          <h3 className='font-bold'>Par Mathéo Lopes | 15 Août 2024</h3>
         </div>
       </div>
 
-
       <div className='flex pb-20 w-[80%]'>
-        <div className='flex flex-col w-[75%] gap-32'>
-        </div>
-        <div className='flex flex-col w-[25%] h-full gap-5'>
-          <h2 className='text-4xl font-[Rubik] text-gray-400'>À l’affiche</h2>
-          <div className='flex flex-col cursor-pointer gap-4' ref={featuredArticleRef}>
-            <img className='w-full h-[200px] object-cover rounded-2xl shadow-md' src="/img/Img_Team.jpg" alt="" />
-            <h4 className='w-[80%] font-[RubikBold] text-[#f8496cc0]'>Mon premier article qui est vraiment super cool</h4>
+        {loading ? (
+          <div className='text-center text-lg font-medium'>
+            Chargement de l'article...
           </div>
+        ) : (
+          <div className='w-full'>
+            <div className='text-lg font-medium mb-10' dangerouslySetInnerHTML={{ __html: articleData.mainTxt }}></div>
 
-          <div className='flex flex-col gap-4'>
-            <h2 className='text-2xl font-[Rubik] text-gray-400'>Derniers articles</h2>
-            <div className='flex flex-col gap-10'>
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div className='flex gap-6 cursor-pointer items-center' ref={(el) => latestArticleRefs.current[i] = el} key={i}>
-                  <img className='w-[20%] h-[20%] object-cover rounded-lg shadow-md' src="/img/Img_Team.jpg" alt="" />
-                  <div className='flex flex-col'>
-                    <h4 className='w-[80%] font-[Rubik] text-[#f8496cc0]'>Mon premier article qui est vraiment super cool</h4>
-                    <p className='text-[14px]'>17 Juillet 2024</p>
-                  </div>
+            {articleData.sections && articleData.sections.map((section, index) => (
+              <div key={index} className='flex flex-col sectionblog gap-4 mb-10'>
+                <div dangerouslySetInnerHTML={{ __html: section.content }}></div>
+                <div className='flex bg-red-300  gap-4'>
+                  {section.images.length === 1 && (
+                    <img className='w-full h-[500px] object-cover rounded-lg shadow-md' src={section.images[0].url} alt={section.images[0].alt} />
+                  )}
+
+                  {section.images.length === 2 && (
+                    section.images.map((image, i) => (
+                      <img key={i} className='w-1/2 h-[300px] object-cover rounded-lg shadow-md' src={image.url} alt={image.alt} />
+                    ))
+                  )}
+
+                  {section.images.length === 3 && (
+                    <>
+                      <div className='flex gap-4'>
+                        <img className='w-1/2 h-[300px] object-cover rounded-lg shadow-md' src={section.images[0].url} alt={section.images[0].alt} />
+                        <img className='w-1/2 h-[300px] object-cover rounded-lg shadow-md' src={section.images[1].url} alt={section.images[1].alt} />
+                      </div>
+                      <img className='w-full h-[300px] object-cover rounded-lg shadow-md mt-4' src={section.images[2].url} alt={section.images[2].alt} />
+                    </>
+                  )}
+
+                  {section.images.length === 4 && (
+                    <div className='grid grid-cols-2 gap-4'>
+                      {section.images.map((image, i) => (
+                        <img key={i} className='w-full h-[300px] object-cover rounded-lg shadow-md' src={image.url} alt={image.alt} />
+                      ))}
+                    </div>
+                  )}
+
+                  {section.images.length > 4 && (
+                    <div className='grid grid-cols-2 gap-4'>
+                      {section.images.slice(0, 4).map((image, i) => (
+                        <img key={i} className={`h-[300px] object-cover rounded-lg shadow-md ${i === 3 ? 'col-span-2' : ''}`} src={image.url} alt={image.alt} />
+                      ))}
+                      {section.images.length > 4 && (
+                        <div className='col-span-2'>
+                          <div className="carousel">
+                            {section.images.slice(4).map((image, i) => (
+                              <img key={i} className='h-[300px] object-cover rounded-lg shadow-md' src={image.url} alt={image.alt} />
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+        )}
+
+        <div className='flex flex-col w-[25%] h-full gap-5'>
+          <FeaturedAndLatestArticles
+          />
         </div>
       </div>
     </section>

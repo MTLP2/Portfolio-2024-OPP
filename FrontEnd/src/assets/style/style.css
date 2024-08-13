@@ -684,3 +684,9 @@ nav .Link {
 .projetContainer .titleSection {
   margin-bottom: -30px;
 }
+
+.sectionblog h2{
+  font-size: 32px;
+  font-weight: 900;
+  color: #f8496cc0;
+}
