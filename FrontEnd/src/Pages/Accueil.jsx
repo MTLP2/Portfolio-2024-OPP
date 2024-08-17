@@ -39,7 +39,7 @@ export default function Accueil({data}) {
     <>
     <Helmet>
         <title>Matheo Lopes Developer Web</title>
-        <meta name="description" content="Matheo Lopes, développeur web freelance à Paris, ouvert aux projets du monde entier.  spécialisé en Three.js, JavaScript, React, Node.js, et WordPress. Engagé à construire des sites performants, et à transformer vos idées en réalités digitales marquantes." />
+        <meta name="description" content="Matheo Lopes, développeur web freelance à Paris, ouvert aux projets du monde entier.  spécialisé en Next.js, JavaScript, React, Node.js. Engagé à développer des sites web ultra-performants, avec un code de haute qualité et optimisé pour la rapidité, assurant une excellence technique à chaque projet." />
     </Helmet>
     <div className='principalContainer'>
         <ImgBox text={"MATHEO LOPES"}/>

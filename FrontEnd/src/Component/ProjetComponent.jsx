@@ -35,11 +35,12 @@ export default function MyComponent({data}) {
       });
     });
   });
-
+  console.log(data);
+  
   return (
     <div className='projectContainer'>
         {data.map((element)=>(
-            <ProjectCard title={element.title} text={element.text} imageUrl={element.imageUrl} tags={element.tags} addToRefs={addToRefs} linkproject={element.linkproject} />
+            <ProjectCard title={element.mainTitle}  imageUrl={element.mainImageUrl} tags={element.tags} addToRefs={addToRefs} linkproject={element.urlProject} />
           ))}
     </div>
   );

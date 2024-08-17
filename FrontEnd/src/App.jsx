@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import axios from 'axios';
@@ -25,9 +24,11 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('https://matheolopes.com/api/project')
+    axios.get('https://admindash.matheolopes.com/api/project/ReadProject')
       .then(response => {
-        setData(response.data);
+        // Trier les articles par createdAt du plus récent au plus ancien
+        const sortedData = response.data.sort((a, b) => new Date(b.projectDate) - new Date(a.projectDate));
+        setData(sortedData);
         setLoading(false);
       })
       .catch(error => {
@@ -43,23 +44,23 @@ function App() {
   return (
     <>
       <Nav />
-        <ScrollSmoother>
-      <div className='Container'>
+      <ScrollSmoother>
+        <div className='Container'>
           {loading ? (
             <p>Chargement en cours...</p>
           ) : (
             <Routes>
               <Route path='*' element={<Accueil data={dataAccueil} />} />
               <Route path='/About' element={<About />} />
-              <Route path='/Le-Blog' element={<Blog/>} />
-              <Route path='/Le-Blog/article/:slug' element={<Articles/>} />
+              {/* <Route path='/Le-Blog' element={<Blog />} /> */}
+              {/* <Route path='/Le-Blog/article/:slug' element={<Articles />} /> */}
               <Route path='/Project' element={<Project data={data} />} />
               <Route path='/Contact' element={<Contact />} />
               <Route path='/CGU' element={<CGU />} />
             </Routes>
           )}
-      </div>
-        </ScrollSmoother>
+        </div>
+      </ScrollSmoother>
     </>
   );
 }

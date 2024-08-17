@@ -38,7 +38,7 @@ export default function About() {
     <div className='principalContainer AboutContainer'>
       <Helmet>
         <title>À propos de Matheo Lopes | Developer Web</title>
-        <meta name="description" content="Faites connaissance avec Matheo Lopes, développeur freelance passionné à Paris. Expert en Three.js, React, Node.js, et WordPress, en réalisant vos projets avec sérieux et détermination." />
+        <meta name="description" content="Faites connaissance avec Matheo Lopes, développeur freelance passionné à Paris. Expert en Next.js, React, Node.js, en réalisant vos projets avec sérieux et détermination." />
     </Helmet>
       <ImgBox text={"A PROPOS"}/>
       <div className='animationbottom'>
