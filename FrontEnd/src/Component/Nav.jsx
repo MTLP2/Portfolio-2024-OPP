@@ -37,7 +37,7 @@ export default function Nav() {
   return (
     <nav className='nav'>
       <NavLink className="Link" to="/"><h2>MATHEO LOPES</h2></NavLink>
-      <ul className='flex gap-6'>
+      <ul className='flex md:gap-6'>
         <li className='p-2'><NavLink className="Link" to="/About">A PROPOS</NavLink></li>
         <li className='p-2'><NavLink className="Link" to="/Project">PROJETS</NavLink></li>
         <li className='p-2'><NavLink className="Link" to="/Contact">CONTACT</NavLink></li>

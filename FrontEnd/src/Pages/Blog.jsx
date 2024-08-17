@@ -158,9 +158,9 @@ export default function Blog() {
 
   return (
     <section className='mt-[400px] w-full items-center gap-[200px] flex flex-col'>
-      <div className='w-[800px] gap-20 flex flex-col'>
+      <div className='w-[800px] gap-20 items-center flex flex-col'>
         <div className='flex flex-col items-center'>
-          <h2 ref={titleRef} className='text-center text-[#f8496c] font-rubikOne text-[80px]'>
+          <h2 ref={titleRef} className='text-center text-[#f8496c] font-rubikOne text-[50px] md:text-[80px]'>
             L'ILOT <br />DE MATHÉO
           </h2>
           <div className="flex items-center justify-center mt-4">
@@ -169,23 +169,23 @@ export default function Blog() {
             <div ref={lineRightRef} className="h-[2px] bg-[#f8496c] w-[50px] ml-4"></div>
           </div>
         </div>
-        <p className='font-bold text-center' ref={textRef}>
-          🔥 Ici, vous trouverez les dernières nouvelles du monde de la tech, des articles approfondis sur React, Next.js, et bien d'autres technologies modernes. Explorez des tutoriels, des animations captivantes, et des astuces pour rester à la pointe de l'innovation. Que vous soyez un développeur débutant ou expérimenté, ce blog est votre destination pour tout ce qui concerne la tech. 🏝️
+        <p className='font-bold text-center w-[40%] md:w-[90%]' ref={textRef}>
+          🔥 Ici, vous trouverez des articles approfondis sur React, Next.js, et bien d'autres technologies modernes. Des animations captivantes, et des astuces pour rester à la pointe de l'innovation. Que vous soyez un développeur débutant ou expérimenté, ce blog est votre destination pour tout ce qui concerne la tech. 🏝️
         </p>
-        <img ref={img1Ref} className='absolute w-[500px] -top-[110px] right-[8%] h-[500px] transform mt-28 -rotate-[160deg]' src="/img/Palm.png" alt="Palm 1" />
-        <img ref={img2Ref} className='absolute w-[500px] -left-[12%] h-[600px] transform mt-28 rotate-[40deg]' src="/img/Palm.png" alt="Palm 2" />
+        <img ref={img1Ref} className=' hidden lg:block absolute w-[500px] -top-[110px] right-[3%] h-[500px] transform mt-28 -rotate-[160deg]' src="/img/Palm.png" alt="Palm 1" />
+        <img ref={img2Ref} className=' hidden lg:block absolute w-[500px] md:-left-[30%] xl:-left-[15%] h-[600px] transform mt-3 rotate-[40deg]' src="/img/Palm.png" alt="Palm 2" />
       </div>
 
-      <div className='flex pb-20 w-[80%]'>
-        <div className='flex flex-col w-[75%] gap-32'>
+      <div className='flex flex-col lg:flex-row pb-20 w-[80%]'>
+        <div className='flex flex-col md:w-[75%] mt-11 lg:mt-0 gap-32 order-2 lg:order-1'>
           {articles.map((article, i) => (
-            <div 
+            <div g  
               key={i}
               ref={(el) => articleRefs.current[i] = el} 
-              className='flex gap-16 cursor-pointer' 
+              className='flex md:gap-16 flex-col md:flex-row cursor-pointer' 
               onClick={() => handleArticleClick(article.slugNavigation)}
             >
-              <img className='w-[40%] h-[350px] rounded-lg shadow-md' ref={(el) => imgRefs.current[i] = el} src={article.mainImageUrl} alt="" />
+              <img className='w-[100%] lg:w-[40%] h-[350px] rounded-lg shadow-md' ref={(el) => imgRefs.current[i] = el} src={article.mainImageUrl} alt="" />
               <div className='flex flex-col gap-6 w-[45%]'>
                 <ul className='flex gap-10 text-[#f8496c] font-bold'>
                   {article.tags.map((tag, idx) => (
@@ -204,7 +204,7 @@ export default function Blog() {
             </div>
           ))}
         </div>
-        <div className='flex flex-col w-[25%] h-full gap-5'>
+        <div className='flex flex-col lg:w-[25%] h-full gap-5 order-1 lg:order-2'>
           <FeaturedAndLatestArticles 
           />
         </div>

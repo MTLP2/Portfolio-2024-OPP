@@ -42,7 +42,7 @@ export default function FeaturedAndLatestArticles() {
         </>
       )}
 
-      <div className='flex flex-col gap-4 mt-10'>
+      <div className='hidden lg:flex flex-col  gap-4 mt-10'>
         <h2 className='text-2xl font-[Rubik] text-gray-400'>Derniers articles</h2>
         <div className='flex flex-col gap-10'>
           {latestArticles.map((article, i) => (
