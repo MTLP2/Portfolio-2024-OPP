@@ -3,6 +3,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import FeaturedAndLatestArticles from '../../Component/FeaturedAndLatestArticles';
+import { Helmet } from 'react-helmet';
+import { faTwitter, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faLink, faShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +27,31 @@ export default function Articles() {
   
   const [articleData, setArticleData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [shareOpen, setShareOpen] = useState(false);
+
+  const handleShare = (platform) => {
+    const articleUrl = window.location.href;
+    const message = `Découvrez cet article : ${articleData.mainTitle} - ${articleUrl}`;
+
+    switch (platform) {
+      case 'twitter':
+        const twitterMessage = `Découvrez cet article : ${articleData.mainTitle} - ${articleUrl}`;
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterMessage)}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`, '_blank');
+        break;
+      case 'copy':
+        navigator.clipboard.writeText(articleUrl);
+        alert('Lien copié dans le presse-papiers');
+        break;
+      default:
+        break;
+    }
+  };
 
   useEffect(() => {
     fetch(`https://admindash.matheolopes.com/api/article/ReadArticle/${slug}`)
@@ -84,8 +114,33 @@ export default function Articles() {
       }
     };
   }, []);
+  console.log(articleData);
+  
 
   return (
+    <>
+    {!loading && articleData && (
+      <Helmet>
+        <title>{`${articleData.mainTitle} - Blog de Mathéo Lopes`}</title>
+        <meta name="description" content={articleData.metaDescription} />
+        <meta name="keywords" content={articleData.tags.join(', ')} />
+        <meta name="author" content="Mathéo Lopes" />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={articleData.metaTitle || articleData.mainTitle} />
+        <meta property="og:description" content={`Découvrez cet article : ${articleData.mainTitle} - ${articleData.metaDescription}`} />
+        <meta property="og:image" content={articleData.mainImageUrl} />
+        <meta property="og:url" content={`http://matheolopes.com/Le-Blog/article/${slug}`} />
+        <meta property="og:type" content="article" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={articleData.metaTitle || articleData.mainTitle} />
+        <meta name="twitter:description" content={articleData.metaDescription} />
+        <meta name="twitter:image" content={articleData.mainImageUrl} />
+      </Helmet>
+    )}
+
     <section className='mt-[120px] w-full items-center gap-[200px] flex flex-col'>
       <div
         className='py-40 flex flex-col text-center items-center bg-[#7ed957] text-white w-full gap-5 relative'
@@ -178,5 +233,33 @@ export default function Articles() {
         </div>
       </div>
     </section>
+
+     {/* Bulle de partage flottante */}
+     <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center">
+        <div 
+          className={`flex flex-col items-center mb-4 transition-opacity duration-300 ${shareOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
+          <button onClick={() => handleShare('twitter')} className="mb-2 p-3 bg-blue-400 rounded-full shadow-md">
+            <FontAwesomeIcon icon={faTwitter} className="text-white" />
+          </button>
+          <button onClick={() => handleShare('facebook')} className="mb-2 p-3 bg-blue-700 rounded-full shadow-md">
+            <FontAwesomeIcon icon={faFacebookF} className="text-white" />
+          </button>
+          <button onClick={() => handleShare('linkedin')} className="mb-2 p-3 bg-blue-600 rounded-full shadow-md">
+            <FontAwesomeIcon icon={faLinkedinIn} className="text-white" />
+          </button>
+          <button onClick={() => handleShare('copy')} className="p-3 bg-gray-600 rounded-full shadow-md">
+            <FontAwesomeIcon icon={faLink} className="text-white" />
+          </button>
+        </div>
+        <button
+          onClick={() => setShareOpen(!shareOpen)}
+          className="p-4 bg-[#fb2d56e5] rounded-full shadow-lg"
+        >
+          <FontAwesomeIcon icon={faShareAlt} className="text-white" />
+        </button>
+      </div>
+    </>
+
   );
 }

@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link, useNavigate } from 'react-router-dom';
 import FeaturedAndLatestArticles from '../Component/FeaturedAndLatestArticles';
+import { Helmet } from 'react-helmet';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -157,6 +158,29 @@ export default function Blog() {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Blog de Mathéo Lopes - Articles sur React, Next.js et plus</title>
+      <meta name="description" content="Découvrez des articles approfondis sur React, Next.js, et bien d'autres technologies modernes. Astuces, animations captivantes et plus encore." />
+      <meta name="keywords" content="React, Next.js, JavaScript, Développement Web, Blog Tech, Mathéo Lopes" />
+      <meta name="author" content="Mathéo Lopes" />
+
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content="Blog de Mathéo Lopes - Articles sur React, Next.js et plus" />
+      <meta property="og:description" content="Découvrez des articles approfondis sur React, Next.js, et bien d'autres technologies modernes." />
+      <meta property="og:image" content="https://mathlpbucket.s3.eu-west-3.amazonaws.com/Mathe%CC%81o+Lopes.jpeg" />
+      <meta property="og:url" content="http://matheolopes.com/Le-Blog" />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Blog de Mathéo Lopes - Articles sur React, Next.js et plus" />
+      <meta name="twitter:description" content="Découvrez des articles approfondis sur React, Next.js, et bien d'autres technologies modernes." />
+      <meta name="twitter:image" content="https://mathlpbucket.s3.eu-west-3.amazonaws.com/Mathe%CC%81o+Lopes.jpeg" />
+
+      <link rel="canonical" href="http://matheolopes.com/Le-Blog" />
+  </Helmet>
+
     <section className='mt-[400px] w-full items-center gap-[200px] flex flex-col'>
       <div className='w-[800px] gap-20 items-center flex flex-col'>
         <div className='flex flex-col items-center'>
@@ -210,5 +234,6 @@ export default function Blog() {
         </div>
       </div>
     </section>
+    </>
   );
 }

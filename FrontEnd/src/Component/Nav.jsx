@@ -42,9 +42,9 @@ export default function Nav() {
         <li className='p-2'><NavLink className="Link" to="/Project">PROJETS</NavLink></li>
         <li className='p-2'><NavLink className="Link" to="/Contact">CONTACT</NavLink></li>
         <li className='p-2 pl-4 font-bold relative' ref={ilotRef}>
-          {/* <NavLink  className="Link" to="/Le-Blog">
+          <NavLink  className="Link" to="/Le-Blog">
             L'ILOT 🏝️<span ref={palmRef} className="palm absolute right-0 opacity-0">🌴</span>
-          </NavLink> */}
+          </NavLink>
         </li>
       </ul>
     </nav>
