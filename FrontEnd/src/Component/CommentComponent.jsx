@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import axios from 'axios';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,9 +14,16 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('https://matheolopes.com/api/comment')
+    fetch('https://admindash.matheolopes.com/api/reviews/GetAllReviews')
       .then(response => {
-        setData(response.data);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setData(data);
+        console.log(data);
         setLoading(false);
       })
       .catch(error => {
@@ -71,9 +77,9 @@ export default function App() {
         >
           {data.map((element, index) => (
             <SwiperSlide key={index}>
-              <p className='text-[30px]'>{truncateText(element.text, 200)}</p>
-              <h3>{element.author}</h3>
-              <img src={element.imgUrl} alt="" />
+              <p className='text-[30px] h-[60%]'>{truncateText(element.txt, 200)}</p>
+              <h3>{element.user}</h3>
+              <img src={element.img} alt="" />
             </SwiperSlide>
           ))}
         </Swiper>
